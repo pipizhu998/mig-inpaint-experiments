@@ -1,0 +1,52 @@
+{
+  "id": "38",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 62808,
+  "coco_annotation_id": 1075290,
+  "coco_category": "pizza",
+  "coco_url": "http://images.cocodataset.org/val2017/000000062808.jpg",
+  "flickr_url": "http://farm9.staticflickr.com/8017/7315214890_701b829cf0_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "id": 3,
+    "name": "Attribution-NonCommercial-NoDerivs License"
+  },
+  "original_size": [
+    640,
+    481
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "547ee9c5c2f5a1b0da558c30f01a92818961999392d205e88422bd4d5bb2e54e",
+  "native_image_sha256": "ae09c311dab544be6c2e4bd6001cbd57d84519760c88ea208fa3a4fe74232cbb",
+  "original_instance_mask_sha256": "7b74e9ca9d2ee7378626e6126d93eb49755f760d6a6c9624c4d315a98e764996",
+  "bbox_xyxy_half_open": [
+    80,
+    219,
+    306,
+    341
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    57,
+    206,
+    329,
+    354
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    29,
+    191,
+    357,
+    369
+  ],
+  "segmentation_area_pixels": 22260,
+  "segmentation_area_fraction": 0.15096028645833334,
+  "bbox_area_fraction": 0.1869845920138889,
+  "enlarged_bbox_area_fraction": 0.2730034722222222,
+  "double_enlarged_bbox_area_fraction": 0.3959418402777778,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "22",
+  "file": "22_legacy_07_bus.jpg",
+  "segmentation_fraction": 0.06146240234375,
+  "mask_centroid_normalized": [
+    0.22959215863196095,
+    0.644327249145739
+  ],
+  "mask_fill_ratio": 0.7992063492063493,
+  "size_bin": "small",
+  "position_bin": "left",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.2087244297038145,
+  "background_intensity_entropy_bits": 7.376639538189988,
+  "visual_background_complexity_bin": "high"
+}

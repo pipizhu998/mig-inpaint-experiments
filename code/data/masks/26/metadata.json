@@ -1,0 +1,52 @@
+{
+  "id": "26",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 173830,
+  "coco_annotation_id": 521392,
+  "coco_category": "person",
+  "coco_url": "http://images.cocodataset.org/val2017/000000173830.jpg",
+  "flickr_url": "http://farm6.staticflickr.com/5178/5486149069_ef317e598c_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by/2.0/",
+    "id": 4,
+    "name": "Attribution License"
+  },
+  "original_size": [
+    593,
+    640
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "46580410572c0e00f7810b350f1a6c7e75fe70203af2a4deef352b2ab3f441aa",
+  "native_image_sha256": "3150d0761725eadfc384e014257653d4a506ee747ee87af0d69c2092ef4e1c4c",
+  "original_instance_mask_sha256": "7552533f12421858930cf6fc3c6a04620dc3c29c0cb3232e8ab8dcf51168afdf",
+  "bbox_xyxy_half_open": [
+    122,
+    112,
+    271,
+    342
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    107,
+    89,
+    286,
+    365
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    89,
+    61,
+    304,
+    384
+  ],
+  "segmentation_area_pixels": 20215,
+  "segmentation_area_fraction": 0.1370917426215278,
+  "bbox_area_fraction": 0.23240831163194445,
+  "enlarged_bbox_area_fraction": 0.3350423177083333,
+  "double_enlarged_bbox_area_fraction": 0.4709540473090278,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

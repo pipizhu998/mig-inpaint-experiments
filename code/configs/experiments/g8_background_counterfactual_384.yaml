@@ -1,0 +1,185 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_background_counterfactual_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: /home/pipizhu/miniforge3/envs/defense-suite/bin/python
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: data/background_affinity_probe_384
+  manifest: manifest_g8_background_counterfactual.json
+  image_dir: images
+  mask_dir: masks
+  samples: ["01"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+  evaluation_masks: [bbox, enlarged_bbox_rho_1.2]
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: g8_current_single_mask
+    type: advpaint
+    tags: [g8, current_baseline, single_mask]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks,mid_block,up_blocks
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      adaptive_attention_topk: 6
+      adaptive_attention_weight_floor: 0.25
+      adaptive_attention_source: masked_context
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_direction: context_targeted
+      context_target_prompt: ""
+      context_target_weight: 1.0
+      context_target_lowfreq_weight: 0.0
+      attn_log_interval: 25
+
+  - name: g8_background_counterfactual
+    type: advpaint
+    tags: [g8, single_loss, background_counterfactual, single_mask]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+
+      # One loss only: target-prompt prediction on the real background must
+      # match empty-prompt prediction on the object-neutralized blurred scene.
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 0.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_direction: context_targeted
+      self_l2_noise_mode: paired
+      context_target_prompt: ""
+      context_target_weight: 1.0
+      context_target_lowfreq_weight: 0.0
+      context_reference_image: runs/g8_background_affinity_attention_384/causal_factor_probe/inputs/court_blurred_r24.png
+      context_target_only: true
+      attn_log_interval: 25
+
+  - name: g8_background_counterfactual_mass
+    type: advpaint
+    tags: [g8, two_route, background_counterfactual, target_mass, single_mask]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+
+      # Minimal two-route objective: one absolute target-token term for the
+      # text path plus one background-counterfactual prediction term.
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 0.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 1.0
+      self_l2_direction: context_targeted
+      self_l2_noise_mode: paired
+      context_target_prompt: ""
+      context_target_weight: 1.0
+      context_target_lowfreq_weight: 0.0
+      context_reference_image: runs/g8_background_affinity_attention_384/causal_factor_probe/inputs/court_blurred_r24.png
+      attn_log_interval: 25
+
+  - name: g8_background_counterfactual_decoy
+    type: advpaint
+    tags: [g8, single_loss, background_counterfactual, decoy_target, single_mask]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 0.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_direction: context_targeted
+      self_l2_noise_mode: paired
+      context_target_prompt: "abstract texture"
+      context_target_weight: 1.0
+      context_target_lowfreq_weight: 0.0
+      context_reference_image: runs/g8_background_affinity_attention_384/causal_factor_probe/inputs/court_blurred_r24.png
+      context_target_only: true
+      attn_log_interval: 25
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda

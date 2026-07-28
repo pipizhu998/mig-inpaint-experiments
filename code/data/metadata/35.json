@@ -1,0 +1,16 @@
+{
+  "id": "35",
+  "file": "35_couch.png",
+  "segmentation_fraction": 0.11594645182291667,
+  "mask_centroid_normalized": [
+    0.7348362919547824,
+    0.6570444084139172
+  ],
+  "mask_fill_ratio": 0.6094318100805589,
+  "size_bin": "medium",
+  "position_bin": "right",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.11105485620478832,
+  "background_intensity_entropy_bits": 7.355393330779398,
+  "visual_background_complexity_bin": "medium"
+}

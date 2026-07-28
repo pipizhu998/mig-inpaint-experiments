@@ -1,0 +1,53 @@
+{
+  "source_family": "coco_val2017_original",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/37_coco_000000136600.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/37_instance.png",
+  "source_image_size": [
+    640,
+    457
+  ],
+  "source_mask_size": [
+    640,
+    457
+  ],
+  "resolution_origin": "resized_from_retained_coco_original",
+  "coco_image_id": 136600,
+  "coco_annotation_id": 1101931,
+  "source_image_sha256": "d60884afbf97caa7f0a3a6ae37eb8b25ae61be3abffc25192622980f177afcc1",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/37_laptop.png",
+  "output_image_sha256": "c82107ab797f5bbce21b29df638843d5ea4f7c50ea594c214f906302fc55a17c",
+  "sample_id": "37",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    175,
+    221,
+    369,
+    471
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    155,
+    196,
+    389,
+    496
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    131,
+    166,
+    413,
+    512
+  ],
+  "segmentation_fraction": 0.14545440673828125,
+  "mask_centroid_normalized": [
+    0.5082257474301275,
+    0.6767654994269784
+  ],
+  "mask_fill_ratio": 0.7861855670103093
+}

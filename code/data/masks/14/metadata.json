@@ -1,0 +1,29 @@
+{
+  "id": "14",
+  "source_group": "selected_from_new20_sam",
+  "subject": "camera",
+  "sam_source_id": "19",
+  "sam_metadata": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/new20_sam_masks_512/19/metadata.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    177,
+    148,
+    350,
+    288
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    159,
+    134,
+    368,
+    302
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    138,
+    117,
+    384,
+    319
+  ]
+}

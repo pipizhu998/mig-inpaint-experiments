@@ -1,0 +1,17 @@
+{
+  "id": "03",
+  "file": "03_incongruent_indoor_basketball.png",
+  "subject": "basketball",
+  "attack_prompt": "a basketball",
+  "inpaint_prompts": [
+    "a soccer ball",
+    "a pumpkin",
+    "a photo"
+  ],
+  "background_variant": "incongruent_indoor",
+  "background_description": "guitar removed from indoor wall",
+  "solid_background_rgb": null,
+  "shared_foreground_source": "15_basketball_court.jpg",
+  "shared_mask_source": "masks_384/15",
+  "segmentation_fraction": 0.15003797743055555
+}

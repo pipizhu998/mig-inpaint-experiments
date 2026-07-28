@@ -1,0 +1,29 @@
+{
+  "id": "22",
+  "source_group": "legacy_10",
+  "subject": "bus",
+  "legacy_source_id": "07",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/7_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    23,
+    206,
+    158,
+    290
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    9,
+    197,
+    172,
+    299
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    0,
+    186,
+    189,
+    310
+  ]
+}

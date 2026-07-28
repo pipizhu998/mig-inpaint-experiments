@@ -1,0 +1,51 @@
+{
+  "source_family": "retained_new20_native_512",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/14_airplane_runway.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/14/segmentation.png",
+  "source_image_size": [
+    512,
+    512
+  ],
+  "source_mask_size": [
+    512,
+    512
+  ],
+  "resolution_origin": "native_512",
+  "source_image_sha256": "45a0119ac28fe4abe134502685f7d915e37aff787f9443e3df83084dfcdbaf23",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/10_airplane_runway.jpg",
+  "output_image_sha256": "45a0119ac28fe4abe134502685f7d915e37aff787f9443e3df83084dfcdbaf23",
+  "sample_id": "10",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    0,
+    197,
+    512,
+    330
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    0,
+    183,
+    512,
+    344
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    0,
+    166,
+    512,
+    361
+  ],
+  "segmentation_fraction": 0.06963729858398438,
+  "mask_centroid_normalized": [
+    0.5149292395563825,
+    0.4648011616258259
+  ],
+  "mask_fill_ratio": 0.26807742011278196
+}

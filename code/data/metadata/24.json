@@ -1,0 +1,16 @@
+{
+  "id": "24",
+  "file": "24_legacy_09_cactus.jpg",
+  "segmentation_fraction": 0.04389784071180555,
+  "mask_centroid_normalized": [
+    0.25405792851527476,
+    0.5371934595562448
+  ],
+  "mask_fill_ratio": 0.6338621229925577,
+  "size_bin": "small",
+  "position_bin": "left",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.049332188987324714,
+  "background_intensity_entropy_bits": 6.505149063467642,
+  "visual_background_complexity_bin": "low"
+}

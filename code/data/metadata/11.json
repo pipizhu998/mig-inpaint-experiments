@@ -1,0 +1,16 @@
+{
+  "id": "11",
+  "file": "11_bus_road.jpg",
+  "segmentation_fraction": 0.5864189995659722,
+  "mask_centroid_normalized": [
+    0.48531702610087396,
+    0.5656913365331464
+  ],
+  "mask_fill_ratio": 0.8278856464460784,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.09810609166188407,
+  "background_intensity_entropy_bits": 7.277522313740999,
+  "visual_background_complexity_bin": "medium"
+}

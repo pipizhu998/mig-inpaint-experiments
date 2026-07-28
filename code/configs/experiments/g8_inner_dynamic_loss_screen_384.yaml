@@ -1,0 +1,262 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_inner_dynamic_loss_screen_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_384
+  mask_dir: masks_384
+  # Three distinct regimes: dynamic-block regression, strong congruent prior,
+  # and dynamic-block success.
+  samples: ["02", "15", "26"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: g8_fixed_noun_150
+    type: advpaint
+    tags: [g8, control, fixed_inner, core_noun, legacy_loss]
+    params: &g8
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      attn_log_interval: 50
+
+  - name: g8_fixed_stable_mass025_150
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_l2]
+    params:
+      <<: *g8
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_dynamic_objective_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, objective_aligned, core_noun]
+    params: &dynamic_objective
+      <<: *g8
+      # PromptFlare's resolution ablation supports the middle semantic pool;
+      # outermost down0/up3 are excluded. mid/up1 are causal anchors observed
+      # in the hard-case logs, while the third block remains image-dependent.
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 3
+      adaptive_required_blocks: mid,up1
+      adaptive_block_weight_floor: 0.5
+      adaptive_block_score_mode: objective_aligned
+      spatial_concentration_weight: 0.75
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_dynamic_cf_multistep_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, noun_counterfactual, core_noun]
+    params: &dynamic_cf
+      <<: *dynamic_objective
+      # Rank blocks by the clean attn2 output change caused by deleting only
+      # the manifest core noun, then directly close that semantic gap.
+      adaptive_block_score_mode: counterfactual_gap
+      spatial_concentration_weight: 0.25
+      spatial_mass_weight: 0.25
+      noun_counterfactual_weight: 0.5
+
+  - name: g8_dynamic_cf_t0_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, noun_counterfactual, initial_step, core_noun]
+    params:
+      <<: *dynamic_cf
+      # AdvPaint, SDA, DiffusionGuard and PromptFlare all identify the initial
+      # high-noise phase as the causal layout/contour intervention point.
+      timestep_indices: "0"
+
+  # Strict equal-loss controls after the first screen: these retain the
+  # winning concentration/mass and stable self-L2 objective, changing only
+  # which inner blocks/attentions are optimized.
+  - name: g8_dynamic_legacy_stable_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, legacy_risk, stable_self_l2, equal_loss]
+    params:
+      <<: *g8
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 3
+      adaptive_required_blocks: mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: legacy
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_attention_clean_stable_150
+    type: advpaint
+    tags: [g8, dynamic_attention, clean_source, stable_self_l2, equal_loss]
+    params:
+      <<: *g8
+      adaptive_attention_topk: 4
+      adaptive_attention_weight_floor: 0.75
+      adaptive_attention_source: clean
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_attention_context_stable_150
+    type: advpaint
+    tags: [g8, dynamic_attention, masked_context, stable_self_l2, equal_loss]
+    params:
+      <<: *g8
+      adaptive_attention_topk: 4
+      adaptive_attention_weight_floor: 0.75
+      adaptive_attention_source: masked_context
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  # Factorial loss controls: isolate the target-mass term from the paired,
+  # block-balanced self-attention distance before selecting a final objective.
+  - name: g8_fixed_mass025_150
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, mass_only_ablation]
+    params:
+      <<: *g8
+      spatial_mass_weight: 0.25
+
+  - name: g8_fixed_stable_nomass_150
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_only_ablation]
+    params:
+      <<: *g8
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_fixed_stable_mass050_150
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_l2, mass_sweep]
+    params:
+      <<: *g8
+      spatial_mass_weight: 0.5
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_gradient_balanced_floor075_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, gradient_balanced, stable_self_l2, equal_loss]
+    params:
+      <<: *g8
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 3
+      adaptive_required_blocks: mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: gradient_balanced
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_gradient_balanced_floor095_150
+    type: advpaint
+    tags: [g8, dynamic_blocks, gradient_balanced, conservative_weights, equal_loss]
+    params:
+      <<: *g8
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 3
+      adaptive_required_blocks: mid,up1
+      adaptive_block_weight_floor: 0.95
+      adaptive_block_score_mode: gradient_balanced
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_gradient_weight_only_150
+    type: advpaint
+    tags: [g8, safe_inner_coverage, gradient_balanced_weights, equal_loss]
+    params:
+      <<: *g8
+      adaptive_block_topk: 3
+      adaptive_required_blocks: down2,mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: gradient_balanced
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+  - name: g8_gradient_add_one_150
+    type: advpaint
+    tags: [g8, safe_inner_coverage, dynamic_extra_block, gradient_balanced, equal_loss]
+    params:
+      <<: *g8
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 4
+      adaptive_required_blocks: down2,mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: gradient_balanced
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+
+      # Intentionally no saved-tensor offload/checkpoint flags at 384.
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

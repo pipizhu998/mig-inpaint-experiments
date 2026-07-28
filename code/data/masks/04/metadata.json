@@ -1,0 +1,29 @@
+{
+  "id": "04",
+  "source_group": "selected_from_new20_sam",
+  "subject": "car",
+  "sam_source_id": "05",
+  "sam_metadata": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/new20_sam_masks_512/05/metadata.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    28,
+    153,
+    378,
+    307
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    0,
+    137,
+    384,
+    323
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    0,
+    118,
+    384,
+    342
+  ]
+}

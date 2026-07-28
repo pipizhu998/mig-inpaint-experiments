@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "image_size": 384,
+  "bbox_scale": 1.2,
+  "prompt_protocol": {
+    "attack": "short grammatical a/an + subject noun phrase",
+    "ccsl": "all lexical attack-prompt words",
+    "inpaint_prompts_per_image": 4
+  },
+  "selection": {
+    "purpose": "revised-G8 image-01 smoke and qualitative comparison"
+  },
+  "items": [
+    {
+      "id": "01",
+      "file": "01_husky_grass.jpg",
+      "subject": "husky",
+      "attack_prompt": "a husky",
+      "inpaint_prompts": [
+        "a golden retriever",
+        "a red fox",
+        "a gray wolf",
+        "a lion cub"
+      ]
+    }
+  ]
+}

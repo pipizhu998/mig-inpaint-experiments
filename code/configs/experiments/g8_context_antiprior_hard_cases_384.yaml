@@ -1,0 +1,111 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_context_antiprior_hard_cases_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_384
+  mask_dir: masks_384
+  samples: ["02", "12", "13", "15", "26"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: g8_context_antiprior_384
+    type: advpaint
+    tags: [g8, core_noun, exact_attention, context_decoy, low_frequency]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks,mid_block,up_blocks
+      timestep_indices: 0,5,10,15,19
+
+      # Suppress only the manifest's core source noun.
+      target_word_mode: single
+      target_word_field: subject
+
+      # Select exact cross-attention modules from the object-removed context.
+      adaptive_attention_topk: 6
+      adaptive_attention_weight_floor: 0.25
+      adaptive_attention_source: masked_context
+
+      # Reduce target-noun mass, then move the masked prediction toward the
+      # least background-destructive anti-prior selected for this image/mask.
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 1.0
+      self_l2_direction: context_decoy_targeted
+      context_target_prompt: ""
+      context_target_weight: 1.0
+      context_target_lowfreq_weight: 1.0
+      context_decoy_prompts: "an empty scene||abstract texture||a cloud of smoke||a geometric pattern"
+      context_decoy_outside_weight: 1.0
+      attn_log_interval: 25
+
+      # Intentionally no saved-tensor offload/checkpoint flags at 384.
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: masked_pixel
+    type: masked_pixel
+    params: {baseline_method: clean}
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

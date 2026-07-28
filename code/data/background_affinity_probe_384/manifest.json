@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "description": "Same basketball pixels and masks under three background priors.",
+  "items": [
+    {
+      "id": "01",
+      "file": "01_congruent_court_basketball.png",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "a soccer ball",
+        "a pumpkin",
+        "a photo"
+      ],
+      "background_variant": "congruent_court",
+      "background_description": "original basketball court",
+      "solid_background_rgb": null,
+      "shared_foreground_source": "15_basketball_court.jpg",
+      "shared_mask_source": "masks_384/15",
+      "segmentation_fraction": 0.15003797743055555
+    },
+    {
+      "id": "02",
+      "file": "02_solid_mean_rgb_basketball.png",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "a soccer ball",
+        "a pumpkin",
+        "a photo"
+      ],
+      "background_variant": "solid_mean_rgb",
+      "background_description": "constant RGB (169, 129, 93)",
+      "solid_background_rgb": [
+        169,
+        129,
+        93
+      ],
+      "shared_foreground_source": "15_basketball_court.jpg",
+      "shared_mask_source": "masks_384/15",
+      "segmentation_fraction": 0.15003797743055555
+    },
+    {
+      "id": "03",
+      "file": "03_incongruent_indoor_basketball.png",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "a soccer ball",
+        "a pumpkin",
+        "a photo"
+      ],
+      "background_variant": "incongruent_indoor",
+      "background_description": "guitar removed from indoor wall",
+      "solid_background_rgb": null,
+      "shared_foreground_source": "15_basketball_court.jpg",
+      "shared_mask_source": "masks_384/15",
+      "segmentation_fraction": 0.15003797743055555
+    }
+  ]
+}

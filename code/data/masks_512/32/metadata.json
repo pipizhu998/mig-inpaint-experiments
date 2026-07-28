@@ -1,0 +1,53 @@
+{
+  "source_family": "coco_val2017_original",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/32_coco_000000445675.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/32_instance.png",
+  "source_image_size": [
+    480,
+    640
+  ],
+  "source_mask_size": [
+    480,
+    640
+  ],
+  "resolution_origin": "resized_from_retained_coco_original",
+  "coco_image_id": 445675,
+  "coco_annotation_id": 598751,
+  "source_image_sha256": "daea523eb0eec8e335184d878994b2e486220fb2d753075781702be4044227fb",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/32_giraffe.png",
+  "output_image_sha256": "d2957c0fce0080697a33cd0203d39a5039563b99064ccc7efd771091c07a1807",
+  "sample_id": "32",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    165,
+    86,
+    357,
+    420
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    145,
+    52,
+    377,
+    454
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    121,
+    11,
+    401,
+    495
+  ],
+  "segmentation_fraction": 0.08028411865234375,
+  "mask_centroid_normalized": [
+    0.509025426179501,
+    0.5152983316946403
+  ],
+  "mask_fill_ratio": 0.328187375249501
+}

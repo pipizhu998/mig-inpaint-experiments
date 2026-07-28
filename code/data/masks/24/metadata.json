@@ -1,0 +1,29 @@
+{
+  "id": "24",
+  "source_group": "legacy_10",
+  "subject": "cactus",
+  "legacy_source_id": "09",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/9_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    66,
+    131,
+    135,
+    279
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    59,
+    116,
+    142,
+    294
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    50,
+    98,
+    151,
+    312
+  ]
+}

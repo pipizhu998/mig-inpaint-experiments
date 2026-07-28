@@ -1,0 +1,16 @@
+{
+  "id": "37",
+  "file": "37_laptop.png",
+  "segmentation_fraction": 0.1454196506076389,
+  "mask_centroid_normalized": [
+    0.5081080218866729,
+    0.6767209295784354
+  ],
+  "mask_fill_ratio": 0.7854003369716505,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.06308872894066485,
+  "background_intensity_entropy_bits": 7.20177404345802,
+  "visual_background_complexity_bin": "low"
+}

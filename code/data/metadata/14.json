@@ -1,0 +1,16 @@
+{
+  "id": "14",
+  "file": "14_camera_table.jpg",
+  "segmentation_fraction": 0.11315239800347222,
+  "mask_centroid_normalized": [
+    0.6981327328450454,
+    0.5864550560962576
+  ],
+  "mask_fill_ratio": 0.6888934764657308,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.07077257190049782,
+  "background_intensity_entropy_bits": 7.770630062637722,
+  "visual_background_complexity_bin": "medium"
+}

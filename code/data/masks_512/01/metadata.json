@@ -1,0 +1,51 @@
+{
+  "source_family": "retained_new20_native_512",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/01_husky_grass.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/01/segmentation.png",
+  "source_image_size": [
+    512,
+    512
+  ],
+  "source_mask_size": [
+    512,
+    512
+  ],
+  "resolution_origin": "native_512",
+  "source_image_sha256": "df432e5d643c4c66572a4151391ed87bf0e935ea8b4d091b04e045d025d4020c",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/01_husky_grass.jpg",
+  "output_image_sha256": "df432e5d643c4c66572a4151391ed87bf0e935ea8b4d091b04e045d025d4020c",
+  "sample_id": "01",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    165,
+    98,
+    512,
+    447
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    130,
+    63,
+    512,
+    482
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    91,
+    21,
+    512,
+    512
+  ],
+  "segmentation_fraction": 0.2388153076171875,
+  "mask_centroid_normalized": [
+    0.6907740900745856,
+    0.48620202831802944
+  ],
+  "mask_fill_ratio": 0.5169483827815992
+}

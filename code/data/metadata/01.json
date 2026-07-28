@@ -1,0 +1,16 @@
+{
+  "id": "01",
+  "file": "01_husky_grass.jpg",
+  "segmentation_fraction": 0.23914930555555555,
+  "mask_centroid_normalized": [
+    0.6905533583610146,
+    0.4862351208104893
+  ],
+  "mask_fill_ratio": 0.5196581196581197,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.24971477467199088,
+  "background_intensity_entropy_bits": 7.88247732832599,
+  "visual_background_complexity_bin": "high"
+}

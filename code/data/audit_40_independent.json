@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "images": 40,
+  "resolution": [
+    384,
+    384
+  ],
+  "unique_exact_image_hashes": 40,
+  "unique_coco_image_ids": 16,
+  "minimum_pairwise_dhash_distance": 89,
+  "near_duplicate_pairs_at_distance_le_12": [],
+  "domain_counts": {
+    "animals": 11,
+    "vehicles": 10,
+    "furniture_and_daily_objects": 13,
+    "people": 4,
+    "food": 2
+  },
+  "scene_type_counts": {
+    "outdoor": 29,
+    "indoor": 11
+  },
+  "scene_context_counts": {
+    "outdoor_natural_or_rural": 15,
+    "indoor_home": 6,
+    "indoor_dining": 2,
+    "outdoor_urban_or_built": 11,
+    "indoor_workplace_or_public": 3,
+    "outdoor_recreational": 3
+  },
+  "size_counts": {
+    "large": 8,
+    "medium": 25,
+    "small": 7
+  },
+  "position_counts": {
+    "center": 32,
+    "bottom": 3,
+    "right": 2,
+    "top": 1,
+    "left": 2
+  },
+  "visual_background_complexity_counts": {
+    "high": 14,
+    "low": 14,
+    "medium": 12
+  },
+  "occlusion_proxy_counts": {
+    "medium": 20,
+    "low": 13,
+    "high": 7
+  },
+  "mask_protocol": {
+    "binary": true,
+    "nested": "segmentation subset bbox subset 1.2x subset repeated-1.44x",
+    "two_stage_complement_verified": true
+  },
+  "prompt_protocol": {
+    "held_out_prompts": 160,
+    "four_unique_per_image": true,
+    "source_subject_excluded": true
+  }
+}

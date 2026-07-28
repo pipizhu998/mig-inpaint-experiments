@@ -1,0 +1,214 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  # Reuse the completed Original/Worst-Scale prefix in this existing run root.
+  name: mig_worst_scale_vs_original_100_512
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 512
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100_512.json
+  image_dir: images_512
+  mask_dir: masks_512
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: l2_all_20step_single
+    type: advpaint
+    tags: [paper, baseline, advpaint, two_stage]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: all
+      layer_match: transformer_blocks
+      timestep_indices: "0"
+      clean_reference_cache_cpu: false
+      loss_saved_tensors_cpu_offload: false
+      vae_saved_tensors_cpu_offload: false
+      unet_highres_saved_tensors_cpu_offload: false
+      autograd_saved_tensors_cpu_offload: false
+
+  - name: mig_inpaint_g8
+    type: advpaint
+    tags: [mig_inpaint, original_g8, all_word, legacy_self_l2, two_stage]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_noise_mode: resample
+      self_l2_aggregation: legacy_sum
+      self_l2_weight: 1.0
+      attn_log_interval: 50
+
+  - name: mig_single_worst_scale_top3_g8
+    type: advpaint
+    tags: [mig_inpaint, original_g8_loss, single_stage, worst_mask, top3]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      worst_scale_mask_name: segmentation.png
+      worst_scale_topk: 3
+      worst_scale_refresh: 5
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_noise_mode: paired
+      self_l2_aggregation: legacy_sum
+      self_l2_weight: 1.0
+      attn_log_interval: 50
+
+  - name: diffusionguard
+    type: diffusionguard
+    tags: [paper, baseline]
+    params:
+      source_root: DiffusionGuard
+      source_repository: https://github.com/choi403/DiffusionGuard.git
+      source_commit: 96e28c19124fbb0e0671f48931ffed180775c7ea
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      linf_model: 0.06274509803921569
+      step_size_model: 0.00392156862745098
+      iterations: 800
+      gradient_repetitions: 1
+      batch_size: 1
+      attack_steps: 4
+      prompt: ""
+      mask_generation: contour_shrink
+      contour_strength: 1.1
+      contour_iterations: 15
+      contour_smoothness: 0.1
+
+  - name: promptflare
+    type: promptflare
+    tags: [paper, baseline]
+    params:
+      source_root: PromptFlare
+      source_repository: https://github.com/NAHOHYUN-SKKU/PromptFlare.git
+      source_commit: 5e9ad004b0e06cfe69608a65e38d2aa24f870142
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      linf_model: 0.06
+      native_linf_model: 0.047058823529411764
+      native_step_model: 0.00784313725490196
+      step_size_model: 0.01
+      epochs: 400
+      gradient_repetitions: 1
+      attack_steps: 4
+      timestep_count: 1
+      loss_mask: true
+      quality_prompt: professional photography, best quality, ultra high res, photo, art, high quality, realistic, anime, masterpiece, best quality, artistic, detail, 4k, 8k
+
+  - name: ddd
+    type: ddd
+    tags: [paper, baseline]
+    params:
+      source_root: DDD
+      source_repository: https://github.com/josejhlee/DDD.git
+      source_commit: 13556b681739bf68ebee187d62acd72c1e76449a
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      text_prompt_tokens: 8
+      text_optimization_steps: 350
+      text_learning_rate: 0.001
+      text_weight_decay: 0.1
+      text_projection_final_steps: 9
+      text_clean_latent_preprocessing: vae_native_minus1_1
+      centroid_samples: 50
+      iterations: 250
+      gradient_repetitions: 7
+      attack_steps: 4
+      timestep_center: 720
+      timestep_std: 6.0
+      timestep_bound: 10
+      l2_step_512: 3.0
+      l2_radius_512: 12.0
+      loss_mask: true
+      shared_linf_cap: false
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

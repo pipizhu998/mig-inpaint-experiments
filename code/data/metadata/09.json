@@ -1,0 +1,16 @@
+{
+  "id": "09",
+  "file": "09_bench_park.jpg",
+  "segmentation_fraction": 0.045769585503472224,
+  "mask_centroid_normalized": [
+    0.7197174941689456,
+    0.7572211645705563
+  ],
+  "mask_fill_ratio": 0.289656652360515,
+  "size_bin": "small",
+  "position_bin": "right",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.2687641695153759,
+  "background_intensity_entropy_bits": 7.632646873315711,
+  "visual_background_complexity_bin": "high"
+}

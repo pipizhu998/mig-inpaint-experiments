@@ -1,0 +1,652 @@
+{
+  "schema_version": 4,
+  "image_size": 384,
+  "bbox_scale": 1.2,
+  "prompt_protocol": {
+    "attack": "short grammatical a/an + subject noun phrase",
+    "ccsl": "all lexical attack-prompt words, equal average after within-word subtoken merge",
+    "inpaint_prompts_per_image": 4,
+    "selection": "paper 25 plus audited COCO val2017 extension IDs 26-40",
+    "inpaint": "four short replacement-subject prompts per image"
+  },
+  "selection": {
+    "included_original_new20_ids": [
+      "01",
+      "02",
+      "03",
+      "05",
+      "07",
+      "08",
+      "09",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "19",
+      "20"
+    ],
+    "excluded_original_new20_ids": [
+      "04",
+      "06",
+      "10",
+      "11",
+      "18"
+    ],
+    "exclusion_reason": "five smallest/weakest foreground masks for foreground editing",
+    "included_legacy_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10"
+    ],
+    "legacy_source_root": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness",
+    "coco_extension": {
+      "dataset_name": "coco_inpaint_15_20260717",
+      "ids": [
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40"
+      ],
+      "source_config": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/dataset_extension_15.json",
+      "source_audit": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/audit.json",
+      "annotation_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+    }
+  },
+  "items": [
+    {
+      "id": "01",
+      "file": "01_husky_grass.jpg",
+      "subject": "husky",
+      "attack_prompt": "a husky",
+      "inpaint_prompts": [
+        "a golden retriever",
+        "a red fox",
+        "a gray wolf",
+        "a lion cub"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "01"
+    },
+    {
+      "id": "02",
+      "file": "02_horse_field.jpg",
+      "subject": "horse",
+      "attack_prompt": "a horse",
+      "inpaint_prompts": [
+        "a zebra",
+        "a camel",
+        "a donkey",
+        "a cow"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "02"
+    },
+    {
+      "id": "03",
+      "file": "03_cat_sofa.jpg",
+      "subject": "cat",
+      "attack_prompt": "a cat",
+      "inpaint_prompts": [
+        "a red fox",
+        "a rabbit",
+        "a raccoon",
+        "a puppy"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "03"
+    },
+    {
+      "id": "04",
+      "file": "04_car_field.jpg",
+      "subject": "car",
+      "attack_prompt": "a car",
+      "inpaint_prompts": [
+        "a red sports car",
+        "a pickup truck",
+        "a police car",
+        "a taxi"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "05"
+    },
+    {
+      "id": "05",
+      "file": "05_bird_branch.jpg",
+      "subject": "bird",
+      "attack_prompt": "a bird",
+      "inpaint_prompts": [
+        "a colorful parrot",
+        "a white owl",
+        "a blue jay",
+        "a raven"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "07"
+    },
+    {
+      "id": "06",
+      "file": "06_vase_table.jpg",
+      "subject": "candle holder",
+      "attack_prompt": "a candle holder",
+      "inpaint_prompts": [
+        "a blue vase",
+        "a lantern",
+        "a flower pot",
+        "a crystal bottle"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "08"
+    },
+    {
+      "id": "07",
+      "file": "07_boat_lake.jpg",
+      "subject": "boat",
+      "attack_prompt": "a boat",
+      "inpaint_prompts": [
+        "a sailboat",
+        "a rowboat",
+        "a yacht",
+        "a canoe"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "09"
+    },
+    {
+      "id": "08",
+      "file": "08_sheep_field.jpg",
+      "subject": "sheep",
+      "attack_prompt": "a sheep",
+      "inpaint_prompts": [
+        "a goat",
+        "an alpaca",
+        "a calf",
+        "a deer"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "12"
+    },
+    {
+      "id": "09",
+      "file": "09_bench_park.jpg",
+      "subject": "bench",
+      "attack_prompt": "a bench",
+      "inpaint_prompts": [
+        "a red sofa",
+        "a wooden table",
+        "a fountain",
+        "a statue"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "13"
+    },
+    {
+      "id": "10",
+      "file": "10_airplane_runway.jpg",
+      "subject": "airplane",
+      "attack_prompt": "an airplane",
+      "inpaint_prompts": [
+        "a red jet",
+        "a helicopter",
+        "a spaceship",
+        "a glider"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "14"
+    },
+    {
+      "id": "11",
+      "file": "11_bus_road.jpg",
+      "subject": "bus",
+      "attack_prompt": "a bus",
+      "inpaint_prompts": [
+        "a double decker bus",
+        "a fire truck",
+        "a tram",
+        "a camper van"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "15"
+    },
+    {
+      "id": "12",
+      "file": "12_backpack_ground.jpg",
+      "subject": "backpack",
+      "attack_prompt": "a backpack",
+      "inpaint_prompts": [
+        "a blue suitcase",
+        "a picnic basket",
+        "a toolbox",
+        "a handbag"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "16"
+    },
+    {
+      "id": "13",
+      "file": "13_guitar_wall.jpg",
+      "subject": "guitar",
+      "attack_prompt": "a guitar",
+      "inpaint_prompts": [
+        "a red electric guitar",
+        "a violin",
+        "a saxophone",
+        "a cello"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "17"
+    },
+    {
+      "id": "14",
+      "file": "14_camera_table.jpg",
+      "subject": "camera",
+      "attack_prompt": "a camera",
+      "inpaint_prompts": [
+        "a typewriter",
+        "a radio",
+        "a projector",
+        "a telescope"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "19"
+    },
+    {
+      "id": "15",
+      "file": "15_basketball_court.jpg",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "a soccer ball",
+        "a beach ball",
+        "a globe",
+        "a pumpkin"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "20"
+    },
+    {
+      "id": "16",
+      "file": "16_legacy_01_woman.jpg",
+      "subject": "woman",
+      "attack_prompt": "a woman",
+      "inpaint_prompts": [
+        "a middle-aged male gardener",
+        "an elderly woman with short gray hair wearing a cream cardigan and holding daisies in a sunny flower garden",
+        "a young woman holding a bouquet of red roses in a sunny flower garden",
+        "a young man"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "01"
+    },
+    {
+      "id": "17",
+      "file": "17_legacy_02_boat.jpg",
+      "subject": "boat",
+      "attack_prompt": "a boat",
+      "inpaint_prompts": [
+        "a bright red wooden rowboat",
+        "a clean blue fishing boat",
+        "a small white sailboat with a blue stripe",
+        "a man fishing from a small wooden boat"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "02"
+    },
+    {
+      "id": "18",
+      "file": "18_legacy_03_dog.jpg",
+      "subject": "dog",
+      "attack_prompt": "a dog",
+      "inpaint_prompts": [
+        "a small brown and white beagle puppy running through grass with its mouth open",
+        "a small red fox cub",
+        "a ginger tabby kitten running through grass with a playful expression",
+        "a black and tan dachshund puppy running toward the camera"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "03"
+    },
+    {
+      "id": "19",
+      "file": "19_legacy_04_dog.jpg",
+      "subject": "dog",
+      "attack_prompt": "a dog",
+      "inpaint_prompts": [
+        "a fluffy white rabbit sitting on grass beside two kittens in a metal bucket and a yellow rubber duck",
+        "a small brown teddy bear plush sitting on grass beside two kittens in a metal bucket and a yellow rubber duck",
+        "a gray tabby cat sitting on grass beside two kittens in a metal bucket and a yellow rubber duck",
+        "a small white lamb sitting on grass beside two kittens in a metal bucket and a yellow rubber duck"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "04"
+    },
+    {
+      "id": "20",
+      "file": "20_legacy_05_polar_bear_cub.jpg",
+      "subject": "polar bear cub",
+      "attack_prompt": "a polar bear cub",
+      "inpaint_prompts": [
+        "a polar bear cub",
+        "a white wolf puppy",
+        "a fluffy white lamb",
+        "a small cream-colored robot dog"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "05"
+    },
+    {
+      "id": "21",
+      "file": "21_legacy_06_archer.jpg",
+      "subject": "archer",
+      "attack_prompt": "an archer",
+      "inpaint_prompts": [
+        "a professional archer holding a bow",
+        "a bronze statue holding a bow",
+        "a futuristic robot archer",
+        "a medieval hunter holding a bow"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "06"
+    },
+    {
+      "id": "22",
+      "file": "22_legacy_07_bus.jpg",
+      "subject": "bus",
+      "attack_prompt": "a bus",
+      "inpaint_prompts": [
+        "a red sports car",
+        "a yellow taxi",
+        "a blue city bus",
+        "a black motorcycle"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "07"
+    },
+    {
+      "id": "23",
+      "file": "23_legacy_08_vase.jpg",
+      "subject": "vase",
+      "attack_prompt": "a vase",
+      "inpaint_prompts": [
+        "an apple",
+        "a watermelon",
+        "a water bottle",
+        "a small crystal vase"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "08"
+    },
+    {
+      "id": "24",
+      "file": "24_legacy_09_cactus.jpg",
+      "subject": "cactus",
+      "attack_prompt": "a cactus",
+      "inpaint_prompts": [
+        "a tiny orange pineapple",
+        "an apple",
+        "a crystal pineapple",
+        "a green cactus"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "09"
+    },
+    {
+      "id": "25",
+      "file": "25_legacy_10_bear.jpg",
+      "subject": "bear",
+      "attack_prompt": "a bear",
+      "inpaint_prompts": [
+        "a man with a backpack",
+        "a bear",
+        "a woman in a red jacket",
+        "a robot explorer"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "10"
+    },
+    {
+      "id": "26",
+      "file": "26_skier.png",
+      "subject": "skier",
+      "attack_prompt": "a skier",
+      "inpaint_prompts": [
+        "an astronaut",
+        "a firefighter",
+        "a medieval knight",
+        "a humanoid robot"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 173830,
+      "coco_annotation_id": 521392
+    },
+    {
+      "id": "27",
+      "file": "27_bicycle.png",
+      "subject": "bicycle",
+      "attack_prompt": "a bicycle",
+      "inpaint_prompts": [
+        "a red motorcycle",
+        "a blue scooter",
+        "a small moped",
+        "a white horse"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 224051,
+      "coco_annotation_id": 344186
+    },
+    {
+      "id": "28",
+      "file": "28_motorcycle.png",
+      "subject": "motorcycle",
+      "attack_prompt": "a motorcycle",
+      "inpaint_prompts": [
+        "a vintage bicycle",
+        "a blue scooter",
+        "a red quad bike",
+        "a small sports car"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 343934,
+      "coco_annotation_id": 150977
+    },
+    {
+      "id": "29",
+      "file": "29_train.png",
+      "subject": "train",
+      "attack_prompt": "a train",
+      "inpaint_prompts": [
+        "a red tram",
+        "a city bus",
+        "a steam locomotive",
+        "a futuristic monorail"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 232538,
+      "coco_annotation_id": 171151
+    },
+    {
+      "id": "30",
+      "file": "30_truck.png",
+      "subject": "truck",
+      "attack_prompt": "a truck",
+      "inpaint_prompts": [
+        "a red fire truck",
+        "a city bus",
+        "a white delivery van",
+        "an armored vehicle"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 33109,
+      "coco_annotation_id": 399108
+    },
+    {
+      "id": "31",
+      "file": "31_elephant.png",
+      "subject": "elephant",
+      "attack_prompt": "an elephant",
+      "inpaint_prompts": [
+        "a rhinoceros",
+        "a giraffe",
+        "a hippopotamus",
+        "a woolly mammoth"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 94852,
+      "coco_annotation_id": 583886
+    },
+    {
+      "id": "32",
+      "file": "32_giraffe.png",
+      "subject": "giraffe",
+      "attack_prompt": "a giraffe",
+      "inpaint_prompts": [
+        "a zebra",
+        "an elephant",
+        "a camel",
+        "a long-necked dinosaur"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 445675,
+      "coco_annotation_id": 598751
+    },
+    {
+      "id": "33",
+      "file": "33_zebra.png",
+      "subject": "zebra",
+      "attack_prompt": "a zebra",
+      "inpaint_prompts": [
+        "a brown horse",
+        "a donkey",
+        "a tiger",
+        "a black cow"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 552902,
+      "coco_annotation_id": 591952
+    },
+    {
+      "id": "34",
+      "file": "34_surfboard.png",
+      "subject": "surfboard",
+      "attack_prompt": "a surfboard",
+      "inpaint_prompts": [
+        "a red canoe",
+        "a snowboard",
+        "a skateboard",
+        "a large suitcase"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 164115,
+      "coco_annotation_id": 653830
+    },
+    {
+      "id": "35",
+      "file": "35_couch.png",
+      "subject": "couch",
+      "attack_prompt": "a couch",
+      "inpaint_prompts": [
+        "a blue armchair",
+        "a wooden bed",
+        "a park bench",
+        "a white bathtub"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 344621,
+      "coco_annotation_id": 114670
+    },
+    {
+      "id": "36",
+      "file": "36_potted_plant.png",
+      "subject": "potted plant",
+      "attack_prompt": "a potted plant",
+      "inpaint_prompts": [
+        "a table lamp",
+        "a glass vase",
+        "a small tree",
+        "a stone sculpture"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 69795,
+      "coco_annotation_id": 20365
+    },
+    {
+      "id": "37",
+      "file": "37_laptop.png",
+      "subject": "laptop",
+      "attack_prompt": "a laptop",
+      "inpaint_prompts": [
+        "a typewriter",
+        "a desktop monitor",
+        "an open book",
+        "a record player"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 136600,
+      "coco_annotation_id": 1101931
+    },
+    {
+      "id": "38",
+      "file": "38_pizza.png",
+      "subject": "pizza",
+      "attack_prompt": "a pizza",
+      "inpaint_prompts": [
+        "a chocolate cake",
+        "a fruit tart",
+        "a sushi platter",
+        "a round clock"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 62808,
+      "coco_annotation_id": 1075290
+    },
+    {
+      "id": "39",
+      "file": "39_teddy_bear.png",
+      "subject": "teddy bear",
+      "attack_prompt": "a teddy bear",
+      "inpaint_prompts": [
+        "a robot toy",
+        "a white rabbit",
+        "a small puppy",
+        "a porcelain doll"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 207306,
+      "coco_annotation_id": 1674889
+    },
+    {
+      "id": "40",
+      "file": "40_clock.png",
+      "subject": "clock",
+      "attack_prompt": "a clock",
+      "inpaint_prompts": [
+        "a framed painting",
+        "a round mirror",
+        "a ceramic plate",
+        "a wall calendar"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 407825,
+      "coco_annotation_id": 341578
+    }
+  ]
+}

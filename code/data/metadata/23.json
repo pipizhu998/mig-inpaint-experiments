@@ -1,0 +1,16 @@
+{
+  "id": "23",
+  "file": "23_legacy_08_vase.jpg",
+  "segmentation_fraction": 0.1268581814236111,
+  "mask_centroid_normalized": [
+    0.5105819079286216,
+    0.45598429902973003
+  ],
+  "mask_fill_ratio": 0.8836923658352229,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.040862135922330095,
+  "background_intensity_entropy_bits": 7.525996934262662,
+  "visual_background_complexity_bin": "low"
+}

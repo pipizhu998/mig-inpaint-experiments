@@ -1,0 +1,16 @@
+{
+  "id": "30",
+  "file": "30_truck.png",
+  "segmentation_fraction": 0.14301893446180555,
+  "mask_centroid_normalized": [
+    0.5188942498700335,
+    0.41657184081340215
+  ],
+  "mask_fill_ratio": 0.7795150439861018,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.15470811208622504,
+  "background_intensity_entropy_bits": 7.382253533801475,
+  "visual_background_complexity_bin": "medium"
+}

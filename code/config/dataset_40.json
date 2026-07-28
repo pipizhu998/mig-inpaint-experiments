@@ -1,0 +1,1221 @@
+{
+  "schema_version": 5,
+  "dataset_name": "mig_inpaint_40_audited_20260721",
+  "image_size": 384,
+  "bbox_scale": 1.2,
+  "prompt_protocol": {
+    "attack": "one short grammatical source-subject description",
+    "inpaint_prompts_per_image": 4,
+    "inpaint": "four held-out replacement subjects distinct from the source"
+  },
+  "selection": {
+    "composition": "audited 40-image base plus stratified COCO val2017 extension of 60",
+    "visual_reviewed": true,
+    "repair_record": {
+      "replaced_watermarked_id": "19",
+      "corrected_source_labels": [
+        "20",
+        "23",
+        "24",
+        "25"
+      ],
+      "corrected_held_out_prompts": [
+        "04",
+        "07",
+        "11",
+        "13",
+        "16",
+        "17",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "30"
+      ]
+    },
+    "extension_manifest": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_60_20260721/dataset_extension_60.json",
+    "active_subset": "audited IDs 01-40",
+    "full_100_dataset": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721"
+  },
+  "items": [
+    {
+      "id": "01",
+      "file": "01_husky_grass.jpg",
+      "subject": "husky",
+      "attack_prompt": "a husky",
+      "inpaint_prompts": [
+        "a golden retriever",
+        "a red fox",
+        "a gray wolf",
+        "a lion cub"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "01",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.23914930555555555,
+      "mask_centroid_normalized": [
+        0.6905533583610146,
+        0.4862351208104893
+      ],
+      "mask_fill_ratio": 0.5196581196581197,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.24971477467199088,
+      "background_intensity_entropy_bits": 7.88247732832599,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "02",
+      "file": "02_horse_field.jpg",
+      "subject": "horse",
+      "attack_prompt": "a horse",
+      "inpaint_prompts": [
+        "a zebra",
+        "a camel",
+        "a donkey",
+        "a cow"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "02",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.08051215277777778,
+      "mask_centroid_normalized": [
+        0.4341674554693053,
+        0.6111351808322718
+      ],
+      "mask_fill_ratio": 0.40657534246575344,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.10087473448194477,
+      "background_intensity_entropy_bits": 6.344399748242598,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "03",
+      "file": "03_cat_sofa.jpg",
+      "subject": "cat",
+      "attack_prompt": "a cat",
+      "inpaint_prompts": [
+        "a red fox",
+        "a rabbit",
+        "a raccoon",
+        "a puppy"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "03",
+      "domain": "animals",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.4157443576388889,
+      "mask_centroid_normalized": [
+        0.698009772979176,
+        0.5829726630524963
+      ],
+      "mask_fill_ratio": 0.6504334171520727,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.025745194539883,
+      "background_intensity_entropy_bits": 7.492483525844998,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "04",
+      "file": "04_car_field.jpg",
+      "subject": "car",
+      "attack_prompt": "a car",
+      "inpaint_prompts": [
+        "a pickup truck",
+        "a yellow bus",
+        "a black motorcycle",
+        "a white horse"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "05",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.23209635416666666,
+      "mask_centroid_normalized": [
+        0.6116742621488043,
+        0.5840872360501296
+      ],
+      "mask_fill_ratio": 0.6349536178107607,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.19309912392256606,
+      "background_intensity_entropy_bits": 6.72806885005922,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "05",
+      "file": "05_bird_branch.jpg",
+      "subject": "bird",
+      "attack_prompt": "a bird",
+      "inpaint_prompts": [
+        "a colorful parrot",
+        "a white owl",
+        "a blue jay",
+        "a raven"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "07",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.16419813368055555,
+      "mask_centroid_normalized": [
+        0.5893669237660888,
+        0.4790309619251011
+      ],
+      "mask_fill_ratio": 0.343140589569161,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.12950731881470903,
+      "background_intensity_entropy_bits": 7.0278277367055235,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "06",
+      "file": "06_vase_table.jpg",
+      "subject": "candle holder",
+      "attack_prompt": "a candle holder",
+      "inpaint_prompts": [
+        "a blue vase",
+        "a lantern",
+        "a flower pot",
+        "a crystal bottle"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "08",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_dining",
+      "segmentation_fraction": 0.08075629340277778,
+      "mask_centroid_normalized": [
+        0.45262635821542174,
+        0.7209958682361113
+      ],
+      "mask_fill_ratio": 0.9450793650793651,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.14854516481246496,
+      "background_intensity_entropy_bits": 7.210086393548295,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "07",
+      "file": "07_boat_lake.jpg",
+      "subject": "boat",
+      "attack_prompt": "a boat",
+      "inpaint_prompts": [
+        "a white swan",
+        "a sea turtle",
+        "a submarine",
+        "a floating sofa"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "09",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.08701578776041667,
+      "mask_centroid_normalized": [
+        0.6118449259941399,
+        0.6853090986194702
+      ],
+      "mask_fill_ratio": 0.5455357142857142,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.07870009285051068,
+      "background_intensity_entropy_bits": 6.7927870409657265,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "08",
+      "file": "08_sheep_field.jpg",
+      "subject": "sheep",
+      "attack_prompt": "a sheep",
+      "inpaint_prompts": [
+        "a goat",
+        "an alpaca",
+        "a calf",
+        "a deer"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "12",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.08051215277777778,
+      "mask_centroid_normalized": [
+        0.5537154803544158,
+        0.5864761547014984
+      ],
+      "mask_fill_ratio": 0.5155462914712524,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.19899103139013452,
+      "background_intensity_entropy_bits": 7.389260926253268,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "09",
+      "file": "09_bench_park.jpg",
+      "subject": "bench",
+      "attack_prompt": "a bench",
+      "inpaint_prompts": [
+        "a red sofa",
+        "a wooden table",
+        "a fountain",
+        "a statue"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "13",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.045769585503472224,
+      "mask_centroid_normalized": [
+        0.7197174941689456,
+        0.7572211645705563
+      ],
+      "mask_fill_ratio": 0.289656652360515,
+      "size_bin": "small",
+      "position_bin": "right",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.2687641695153759,
+      "background_intensity_entropy_bits": 7.632646873315711,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "10",
+      "file": "10_airplane_runway.jpg",
+      "subject": "airplane",
+      "attack_prompt": "an airplane",
+      "inpaint_prompts": [
+        "a red jet",
+        "a helicopter",
+        "a spaceship",
+        "a glider"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "14",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.06983100043402778,
+      "mask_centroid_normalized": [
+        0.5164621194390823,
+        0.46456076968348153
+      ],
+      "mask_fill_ratio": 0.26815104166666665,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.027041608643982532,
+      "background_intensity_entropy_bits": 6.415391589263638,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "11",
+      "file": "11_bus_road.jpg",
+      "subject": "bus",
+      "attack_prompt": "a bus",
+      "inpaint_prompts": [
+        "a red tram",
+        "a fire truck",
+        "a camper van",
+        "a steam locomotive"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "15",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.5864189995659722,
+      "mask_centroid_normalized": [
+        0.48531702610087396,
+        0.5656913365331464
+      ],
+      "mask_fill_ratio": 0.8278856464460784,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.09810609166188407,
+      "background_intensity_entropy_bits": 7.277522313740999,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "12",
+      "file": "12_backpack_ground.jpg",
+      "subject": "backpack",
+      "attack_prompt": "a backpack",
+      "inpaint_prompts": [
+        "a blue suitcase",
+        "a picnic basket",
+        "a toolbox",
+        "a handbag"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "16",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.4542711046006944,
+      "mask_centroid_normalized": [
+        0.4933008071835575,
+        0.6797539529425842
+      ],
+      "mask_fill_ratio": 0.8849914123398072,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.01893849958370096,
+      "background_intensity_entropy_bits": 7.0948183956627755,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "13",
+      "file": "13_guitar_wall.jpg",
+      "subject": "guitar",
+      "attack_prompt": "a guitar",
+      "inpaint_prompts": [
+        "a violin",
+        "a saxophone",
+        "a cello",
+        "a grand piano"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "17",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.1597832573784722,
+      "mask_centroid_normalized": [
+        0.5136786761944413,
+        0.7425175891965559
+      ],
+      "mask_fill_ratio": 0.3566174244717564,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.019145243956576134,
+      "background_intensity_entropy_bits": 5.690791128912297,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "14",
+      "file": "14_camera_table.jpg",
+      "subject": "camera",
+      "attack_prompt": "a camera",
+      "inpaint_prompts": [
+        "a typewriter",
+        "a radio",
+        "a projector",
+        "a telescope"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "19",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_workplace_or_public",
+      "segmentation_fraction": 0.11315239800347222,
+      "mask_centroid_normalized": [
+        0.6981327328450454,
+        0.5864550560962576
+      ],
+      "mask_fill_ratio": 0.6888934764657308,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.07077257190049782,
+      "background_intensity_entropy_bits": 7.770630062637722,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "15",
+      "file": "15_basketball_court.jpg",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "a soccer ball",
+        "a beach ball",
+        "a globe",
+        "a pumpkin"
+      ],
+      "source_group": "selected_from_new20_sam",
+      "original_new20_id": "20",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_recreational",
+      "segmentation_fraction": 0.15003797743055555,
+      "mask_centroid_normalized": [
+        0.5109632486818894,
+        0.5008402675071859
+      ],
+      "mask_fill_ratio": 0.5845487212005919,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.0668703922382153,
+      "background_intensity_entropy_bits": 6.9237556211779046,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "16",
+      "file": "16_legacy_01_woman.jpg",
+      "subject": "woman",
+      "attack_prompt": "a woman",
+      "inpaint_prompts": [
+        "an astronaut",
+        "a scarecrow",
+        "a medieval knight",
+        "a marble statue"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "01",
+      "domain": "people",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.2167019314236111,
+      "mask_centroid_normalized": [
+        0.5093247620477936,
+        0.6193550748783622
+      ],
+      "mask_fill_ratio": 0.5582849954574044,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.2665494969784073,
+      "background_intensity_entropy_bits": 7.316358146657983,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "17",
+      "file": "17_legacy_02_boat.jpg",
+      "subject": "boat",
+      "attack_prompt": "a boat",
+      "inpaint_prompts": [
+        "a white swan",
+        "a sea turtle",
+        "a submarine",
+        "a floating sofa"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "02",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.07012939453125,
+      "mask_centroid_normalized": [
+        0.3615656504830199,
+        0.35144269698326236
+      ],
+      "mask_fill_ratio": 0.6403095975232198,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.17838310906902966,
+      "background_intensity_entropy_bits": 6.015842880146,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "18",
+      "file": "18_legacy_03_dog.jpg",
+      "subject": "dog",
+      "attack_prompt": "a dog",
+      "inpaint_prompts": [
+        "a small brown and white beagle puppy running through grass with its mouth open",
+        "a small red fox cub",
+        "a ginger tabby kitten running through grass with a playful expression",
+        "a black and tan dachshund puppy running toward the camera"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "03",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.24896240234375,
+      "mask_centroid_normalized": [
+        0.46861069166810154,
+        0.5405016232568933
+      ],
+      "mask_fill_ratio": 0.7694774570835692,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.04072418619350761,
+      "background_intensity_entropy_bits": 6.87356150680489,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "19",
+      "file": "19_coco_dog.png",
+      "subject": "dog",
+      "attack_prompt": "a dog",
+      "inpaint_prompts": [
+        "a red fox",
+        "a gray wolf",
+        "a white rabbit",
+        "a tiger cub"
+      ],
+      "source_group": "coco_val2017_audit_replacement",
+      "coco_image_id": 30494,
+      "coco_annotation_id": 6427,
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.03683132595486111,
+      "mask_centroid_normalized": [
+        0.3035455967170383,
+        0.27442354186607876
+      ],
+      "mask_fill_ratio": 0.3265392015392015,
+      "size_bin": "small",
+      "position_bin": "top",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.3195423340961098,
+      "background_intensity_entropy_bits": 7.686660780012558,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "20",
+      "file": "20_legacy_05_polar_bear_cub.jpg",
+      "subject": "puppy",
+      "attack_prompt": "a puppy",
+      "inpaint_prompts": [
+        "a red fox cub",
+        "a white rabbit",
+        "a fluffy lamb",
+        "a small robot"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "05",
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.15250651041666666,
+      "mask_centroid_normalized": [
+        0.500876127262071,
+        0.5314112406222106
+      ],
+      "mask_fill_ratio": 0.45982088087351247,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.06960181806542474,
+      "background_intensity_entropy_bits": 6.224762222064176,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "21",
+      "file": "21_legacy_06_archer.jpg",
+      "subject": "archer",
+      "attack_prompt": "an archer",
+      "inpaint_prompts": [
+        "a firefighter",
+        "a bronze statue",
+        "a medieval knight",
+        "a humanoid robot"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "06",
+      "domain": "people",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_recreational",
+      "segmentation_fraction": 0.09522840711805555,
+      "mask_centroid_normalized": [
+        0.4471737714867334,
+        0.5858840858997049
+      ],
+      "mask_fill_ratio": 0.5701640409290238,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.3138276342812598,
+      "background_intensity_entropy_bits": 7.500664800224818,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "22",
+      "file": "22_legacy_07_bus.jpg",
+      "subject": "bus",
+      "attack_prompt": "a bus",
+      "inpaint_prompts": [
+        "a red sports car",
+        "a yellow taxi",
+        "a red tram",
+        "a black motorcycle"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "07",
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.06146240234375,
+      "mask_centroid_normalized": [
+        0.22959215863196095,
+        0.644327249145739
+      ],
+      "mask_fill_ratio": 0.7992063492063493,
+      "size_bin": "small",
+      "position_bin": "left",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.2087244297038145,
+      "background_intensity_entropy_bits": 7.376639538189988,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "23",
+      "file": "23_legacy_08_vase.jpg",
+      "subject": "perfume bottle",
+      "attack_prompt": "a perfume bottle",
+      "inpaint_prompts": [
+        "a glass vase",
+        "a candle holder",
+        "a soap dispenser",
+        "a small lantern"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "08",
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.1268581814236111,
+      "mask_centroid_normalized": [
+        0.5105819079286216,
+        0.45598429902973003
+      ],
+      "mask_fill_ratio": 0.8836923658352229,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.040862135922330095,
+      "background_intensity_entropy_bits": 7.525996934262662,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "24",
+      "file": "24_legacy_09_cactus.jpg",
+      "subject": "pineapple",
+      "attack_prompt": "a pineapple",
+      "inpaint_prompts": [
+        "a green cactus",
+        "a flower vase",
+        "a lantern",
+        "a watermelon"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "09",
+      "domain": "food",
+      "scene_type": "indoor",
+      "scene_context": "indoor_workplace_or_public",
+      "segmentation_fraction": 0.04389784071180555,
+      "mask_centroid_normalized": [
+        0.25405792851527476,
+        0.5371934595562448
+      ],
+      "mask_fill_ratio": 0.6338621229925577,
+      "size_bin": "small",
+      "position_bin": "left",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.049332188987324714,
+      "background_intensity_entropy_bits": 6.505149063467642,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "25",
+      "file": "25_legacy_10_bear.jpg",
+      "subject": "hiker",
+      "attack_prompt": "a hiker",
+      "inpaint_prompts": [
+        "an astronaut",
+        "a firefighter",
+        "a medieval knight",
+        "a humanoid robot"
+      ],
+      "source_group": "legacy_10",
+      "legacy_source_id": "10",
+      "domain": "people",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.021809895833333332,
+      "mask_centroid_normalized": [
+        0.4592020316173701,
+        0.6537035774131952
+      ],
+      "mask_fill_ratio": 0.379782711384034,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.17483361064891847,
+      "background_intensity_entropy_bits": 7.391972158326459,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "26",
+      "file": "26_skier.png",
+      "subject": "skier",
+      "attack_prompt": "a skier",
+      "inpaint_prompts": [
+        "an astronaut",
+        "a firefighter",
+        "a medieval knight",
+        "a humanoid robot"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 173830,
+      "coco_annotation_id": 521392,
+      "domain": "people",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_recreational",
+      "segmentation_fraction": 0.1370917426215278,
+      "mask_centroid_normalized": [
+        0.5292638083164726,
+        0.5911162574129672
+      ],
+      "mask_fill_ratio": 0.5898745258243362,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.05695491233171698,
+      "background_intensity_entropy_bits": 6.863637591203088,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "27",
+      "file": "27_bicycle.png",
+      "subject": "bicycle",
+      "attack_prompt": "a bicycle",
+      "inpaint_prompts": [
+        "a red motorcycle",
+        "a blue scooter",
+        "a small moped",
+        "a white horse"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 224051,
+      "coco_annotation_id": 344186,
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.09380425347222222,
+      "mask_centroid_normalized": [
+        0.6543033371740257,
+        0.5581711987339306
+      ],
+      "mask_fill_ratio": 0.5742516710258646,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.0588068011734419,
+      "background_intensity_entropy_bits": 5.796147357943137,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "28",
+      "file": "28_motorcycle.png",
+      "subject": "motorcycle",
+      "attack_prompt": "a motorcycle",
+      "inpaint_prompts": [
+        "a vintage bicycle",
+        "a blue scooter",
+        "a red quad bike",
+        "a small sports car"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 343934,
+      "coco_annotation_id": 150977,
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.1416015625,
+      "mask_centroid_normalized": [
+        0.5173479187299301,
+        0.6220309014335305
+      ],
+      "mask_fill_ratio": 0.5664216151696824,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.24396410061939072,
+      "background_intensity_entropy_bits": 7.864034599556366,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "29",
+      "file": "29_train.png",
+      "subject": "train",
+      "attack_prompt": "a train",
+      "inpaint_prompts": [
+        "a red tram",
+        "a city bus",
+        "a steam locomotive",
+        "a futuristic monorail"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 232538,
+      "coco_annotation_id": 171151,
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.1472846137152778,
+      "mask_centroid_normalized": [
+        0.4046575412292916,
+        0.5805210967932893
+      ],
+      "mask_fill_ratio": 0.6607642691980041,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.08017464887305349,
+      "background_intensity_entropy_bits": 7.496844095296791,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "30",
+      "file": "30_truck.png",
+      "subject": "truck",
+      "attack_prompt": "a truck",
+      "inpaint_prompts": [
+        "a city bus",
+        "a white delivery van",
+        "an armored vehicle",
+        "a tractor"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 33109,
+      "coco_annotation_id": 399108,
+      "domain": "vehicles",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.14301893446180555,
+      "mask_centroid_normalized": [
+        0.5188942498700335,
+        0.41657184081340215
+      ],
+      "mask_fill_ratio": 0.7795150439861018,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.15470811208622504,
+      "background_intensity_entropy_bits": 7.382253533801475,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "31",
+      "file": "31_elephant.png",
+      "subject": "elephant",
+      "attack_prompt": "an elephant",
+      "inpaint_prompts": [
+        "a rhinoceros",
+        "a giraffe",
+        "a hippopotamus",
+        "a woolly mammoth"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 94852,
+      "coco_annotation_id": 583886,
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.12398274739583333,
+      "mask_centroid_normalized": [
+        0.5057183612810386,
+        0.4334777776540037
+      ],
+      "mask_fill_ratio": 0.4614569135241557,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.28772818059361793,
+      "background_intensity_entropy_bits": 7.02057146987239,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "32",
+      "file": "32_giraffe.png",
+      "subject": "giraffe",
+      "attack_prompt": "a giraffe",
+      "inpaint_prompts": [
+        "a zebra",
+        "an elephant",
+        "a camel",
+        "a long-necked dinosaur"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 445675,
+      "coco_annotation_id": 598751,
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.08045789930555555,
+      "mask_centroid_normalized": [
+        0.5084035518293488,
+        0.5163103950956797
+      ],
+      "mask_fill_ratio": 0.33053798790850586,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.21444480500324503,
+      "background_intensity_entropy_bits": 7.142730236972479,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "33",
+      "file": "33_zebra.png",
+      "subject": "zebra",
+      "attack_prompt": "a zebra",
+      "inpaint_prompts": [
+        "a brown horse",
+        "a donkey",
+        "a tiger",
+        "a black cow"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 552902,
+      "coco_annotation_id": 591952,
+      "domain": "animals",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_natural_or_rural",
+      "segmentation_fraction": 0.14576551649305555,
+      "mask_centroid_normalized": [
+        0.44916839990077984,
+        0.44467373371061597
+      ],
+      "mask_fill_ratio": 0.5806991948992273,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.36122005049141803,
+      "background_intensity_entropy_bits": 7.239682285273734,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "34",
+      "file": "34_surfboard.png",
+      "subject": "surfboard",
+      "attack_prompt": "a surfboard",
+      "inpaint_prompts": [
+        "a red canoe",
+        "a snowboard",
+        "a skateboard",
+        "a large suitcase"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 164115,
+      "coco_annotation_id": 653830,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.09291585286458333,
+      "mask_centroid_normalized": [
+        0.41874647330920367,
+        0.6004587342160042
+      ],
+      "mask_fill_ratio": 0.5094823739402052,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.23598370154386752,
+      "background_intensity_entropy_bits": 7.4804265816178,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "35",
+      "file": "35_couch.png",
+      "subject": "couch",
+      "attack_prompt": "a couch",
+      "inpaint_prompts": [
+        "a blue armchair",
+        "a wooden bed",
+        "a park bench",
+        "a white bathtub"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 344621,
+      "coco_annotation_id": 114670,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.11594645182291667,
+      "mask_centroid_normalized": [
+        0.7348362919547824,
+        0.6570444084139172
+      ],
+      "mask_fill_ratio": 0.6094318100805589,
+      "size_bin": "medium",
+      "position_bin": "right",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.11105485620478832,
+      "background_intensity_entropy_bits": 7.355393330779398,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "36",
+      "file": "36_potted_plant.png",
+      "subject": "potted plant",
+      "attack_prompt": "a potted plant",
+      "inpaint_prompts": [
+        "a table lamp",
+        "a glass vase",
+        "a small tree",
+        "a stone sculpture"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 69795,
+      "coco_annotation_id": 20365,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.1510281032986111,
+      "mask_centroid_normalized": [
+        0.4501106172642656,
+        0.5227392047046631
+      ],
+      "mask_fill_ratio": 0.6094357178041705,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.1507836339526784,
+      "background_intensity_entropy_bits": 7.580534167777692,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "37",
+      "file": "37_laptop.png",
+      "subject": "laptop",
+      "attack_prompt": "a laptop",
+      "inpaint_prompts": [
+        "a typewriter",
+        "a desktop monitor",
+        "an open book",
+        "a record player"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 136600,
+      "coco_annotation_id": 1101931,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_workplace_or_public",
+      "segmentation_fraction": 0.1454196506076389,
+      "mask_centroid_normalized": [
+        0.5081080218866729,
+        0.6767209295784354
+      ],
+      "mask_fill_ratio": 0.7854003369716505,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.06308872894066485,
+      "background_intensity_entropy_bits": 7.20177404345802,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "38",
+      "file": "38_pizza.png",
+      "subject": "pizza",
+      "attack_prompt": "a pizza",
+      "inpaint_prompts": [
+        "a chocolate cake",
+        "a fruit tart",
+        "a sushi platter",
+        "a round clock"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 62808,
+      "coco_annotation_id": 1075290,
+      "domain": "food",
+      "scene_type": "indoor",
+      "scene_context": "indoor_dining",
+      "segmentation_fraction": 0.15096028645833334,
+      "mask_centroid_normalized": [
+        0.5066425979229566,
+        0.7284706729630125
+      ],
+      "mask_fill_ratio": 0.8073407805019585,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.15168216236940477,
+      "background_intensity_entropy_bits": 7.471591865927607,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "39",
+      "file": "39_teddy_bear.png",
+      "subject": "teddy bear",
+      "attack_prompt": "a teddy bear",
+      "inpaint_prompts": [
+        "a robot toy",
+        "a white rabbit",
+        "a small puppy",
+        "a porcelain doll"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 207306,
+      "coco_annotation_id": 1674889,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "outdoor",
+      "scene_context": "outdoor_urban_or_built",
+      "segmentation_fraction": 0.1574978298611111,
+      "mask_centroid_normalized": [
+        0.43936013343538555,
+        0.5355233714290341
+      ],
+      "mask_fill_ratio": 0.6475213293927397,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.1277851117264473,
+      "background_intensity_entropy_bits": 7.149080399928209,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "40",
+      "file": "40_clock.png",
+      "subject": "clock",
+      "attack_prompt": "a clock",
+      "inpaint_prompts": [
+        "a framed painting",
+        "a round mirror",
+        "a ceramic plate",
+        "a wall calendar"
+      ],
+      "source_group": "coco_val2017_extension_15",
+      "coco_image_id": 407825,
+      "coco_annotation_id": 341578,
+      "domain": "furniture_and_daily_objects",
+      "scene_type": "indoor",
+      "scene_context": "indoor_home",
+      "segmentation_fraction": 0.11250813802083333,
+      "mask_centroid_normalized": [
+        0.5120641110990451,
+        0.6167965854418576
+      ],
+      "mask_fill_ratio": 0.7956834532374101,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.06550975807314352,
+      "background_intensity_entropy_bits": 7.63110671848754,
+      "visual_background_complexity_bin": "medium"
+    }
+  ]
+}

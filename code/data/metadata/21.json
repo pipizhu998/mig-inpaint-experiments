@@ -1,0 +1,16 @@
+{
+  "id": "21",
+  "file": "21_legacy_06_archer.jpg",
+  "segmentation_fraction": 0.09522840711805555,
+  "mask_centroid_normalized": [
+    0.4471737714867334,
+    0.5858840858997049
+  ],
+  "mask_fill_ratio": 0.5701640409290238,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.3138276342812598,
+  "background_intensity_entropy_bits": 7.500664800224818,
+  "visual_background_complexity_bin": "high"
+}

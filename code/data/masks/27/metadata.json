@@ -1,0 +1,52 @@
+{
+  "id": "27",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 224051,
+  "coco_annotation_id": 344186,
+  "coco_category": "bicycle",
+  "coco_url": "http://images.cocodataset.org/val2017/000000224051.jpg",
+  "flickr_url": "http://farm6.staticflickr.com/5067/5661709113_b97be0cde2_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+    "id": 2,
+    "name": "Attribution-NonCommercial License"
+  },
+  "original_size": [
+    640,
+    428
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "ad01e4704883ecaaa25321efcc24d2ada74a725fe70cc0578890dca7a4745c60",
+  "native_image_sha256": "179e8d4a48415f7e2a1f4dfb3ed8322424ac6a5f06cea0fa26762b86fb455887",
+  "original_instance_mask_sha256": "7ad9335a44b8faf2a41c511c1ef2ba2c26d534c570df047254b8b84910c6db6c",
+  "bbox_xyxy_half_open": [
+    209,
+    67,
+    302,
+    326
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    199,
+    41,
+    312,
+    352
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    187,
+    9,
+    324,
+    384
+  ],
+  "segmentation_area_pixels": 13832,
+  "segmentation_area_fraction": 0.09380425347222222,
+  "bbox_area_fraction": 0.16335042317708334,
+  "enlarged_bbox_area_fraction": 0.23832872178819445,
+  "double_enlarged_bbox_area_fraction": 0.3484090169270833,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

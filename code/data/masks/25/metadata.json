@@ -1,0 +1,29 @@
+{
+  "id": "25",
+  "source_group": "legacy_10",
+  "subject": "bear",
+  "legacy_source_id": "10",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/10_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    153,
+    178,
+    211,
+    324
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    147,
+    163,
+    217,
+    339
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    140,
+    145,
+    224,
+    357
+  ]
+}

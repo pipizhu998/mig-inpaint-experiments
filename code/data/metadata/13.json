@@ -1,0 +1,16 @@
+{
+  "id": "13",
+  "file": "13_guitar_wall.jpg",
+  "segmentation_fraction": 0.1597832573784722,
+  "mask_centroid_normalized": [
+    0.5136786761944413,
+    0.7425175891965559
+  ],
+  "mask_fill_ratio": 0.3566174244717564,
+  "size_bin": "medium",
+  "position_bin": "bottom",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.019145243956576134,
+  "background_intensity_entropy_bits": 5.690791128912297,
+  "visual_background_complexity_bin": "low"
+}

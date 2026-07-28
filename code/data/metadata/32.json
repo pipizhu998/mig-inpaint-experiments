@@ -1,0 +1,16 @@
+{
+  "id": "32",
+  "file": "32_giraffe.png",
+  "segmentation_fraction": 0.08045789930555555,
+  "mask_centroid_normalized": [
+    0.5084035518293488,
+    0.5163103950956797
+  ],
+  "mask_fill_ratio": 0.33053798790850586,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.21444480500324503,
+  "background_intensity_entropy_bits": 7.142730236972479,
+  "visual_background_complexity_bin": "high"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "28",
+  "file": "28_motorcycle.png",
+  "segmentation_fraction": 0.1416015625,
+  "mask_centroid_normalized": [
+    0.5173479187299301,
+    0.6220309014335305
+  ],
+  "mask_fill_ratio": 0.5664216151696824,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.24396410061939072,
+  "background_intensity_entropy_bits": 7.864034599556366,
+  "visual_background_complexity_bin": "high"
+}

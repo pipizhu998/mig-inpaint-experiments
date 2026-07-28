@@ -1,0 +1,16 @@
+{
+  "id": "34",
+  "file": "34_surfboard.png",
+  "segmentation_fraction": 0.09291585286458333,
+  "mask_centroid_normalized": [
+    0.41874647330920367,
+    0.6004587342160042
+  ],
+  "mask_fill_ratio": 0.5094823739402052,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.23598370154386752,
+  "background_intensity_entropy_bits": 7.4804265816178,
+  "visual_background_complexity_bin": "high"
+}

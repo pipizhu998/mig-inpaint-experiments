@@ -1,0 +1,16 @@
+{
+  "id": "27",
+  "file": "27_bicycle.png",
+  "segmentation_fraction": 0.09380425347222222,
+  "mask_centroid_normalized": [
+    0.6543033371740257,
+    0.5581711987339306
+  ],
+  "mask_fill_ratio": 0.5742516710258646,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.0588068011734419,
+  "background_intensity_entropy_bits": 5.796147357943137,
+  "visual_background_complexity_bin": "low"
+}

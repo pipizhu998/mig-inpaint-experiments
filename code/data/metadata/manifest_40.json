@@ -1,0 +1,645 @@
+{
+  "count": 40,
+  "items": [
+    {
+      "id": "01",
+      "file": "01_husky_grass.jpg",
+      "segmentation_fraction": 0.23914930555555555,
+      "mask_centroid_normalized": [
+        0.6905533583610146,
+        0.4862351208104893
+      ],
+      "mask_fill_ratio": 0.5196581196581197,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.24971477467199088,
+      "background_intensity_entropy_bits": 7.88247732832599,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "02",
+      "file": "02_horse_field.jpg",
+      "segmentation_fraction": 0.08051215277777778,
+      "mask_centroid_normalized": [
+        0.4341674554693053,
+        0.6111351808322718
+      ],
+      "mask_fill_ratio": 0.40657534246575344,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.10087473448194477,
+      "background_intensity_entropy_bits": 6.344399748242598,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "03",
+      "file": "03_cat_sofa.jpg",
+      "segmentation_fraction": 0.4157443576388889,
+      "mask_centroid_normalized": [
+        0.698009772979176,
+        0.5829726630524963
+      ],
+      "mask_fill_ratio": 0.6504334171520727,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.025745194539883,
+      "background_intensity_entropy_bits": 7.492483525844998,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "04",
+      "file": "04_car_field.jpg",
+      "segmentation_fraction": 0.23209635416666666,
+      "mask_centroid_normalized": [
+        0.6116742621488043,
+        0.5840872360501296
+      ],
+      "mask_fill_ratio": 0.6349536178107607,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.19309912392256606,
+      "background_intensity_entropy_bits": 6.72806885005922,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "05",
+      "file": "05_bird_branch.jpg",
+      "segmentation_fraction": 0.16419813368055555,
+      "mask_centroid_normalized": [
+        0.5893669237660888,
+        0.4790309619251011
+      ],
+      "mask_fill_ratio": 0.343140589569161,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.12950731881470903,
+      "background_intensity_entropy_bits": 7.0278277367055235,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "06",
+      "file": "06_vase_table.jpg",
+      "segmentation_fraction": 0.08075629340277778,
+      "mask_centroid_normalized": [
+        0.45262635821542174,
+        0.7209958682361113
+      ],
+      "mask_fill_ratio": 0.9450793650793651,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.14854516481246496,
+      "background_intensity_entropy_bits": 7.210086393548295,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "07",
+      "file": "07_boat_lake.jpg",
+      "segmentation_fraction": 0.08701578776041667,
+      "mask_centroid_normalized": [
+        0.6118449259941399,
+        0.6853090986194702
+      ],
+      "mask_fill_ratio": 0.5455357142857142,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.07870009285051068,
+      "background_intensity_entropy_bits": 6.7927870409657265,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "08",
+      "file": "08_sheep_field.jpg",
+      "segmentation_fraction": 0.08051215277777778,
+      "mask_centroid_normalized": [
+        0.5537154803544158,
+        0.5864761547014984
+      ],
+      "mask_fill_ratio": 0.5155462914712524,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.19899103139013452,
+      "background_intensity_entropy_bits": 7.389260926253268,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "09",
+      "file": "09_bench_park.jpg",
+      "segmentation_fraction": 0.045769585503472224,
+      "mask_centroid_normalized": [
+        0.7197174941689456,
+        0.7572211645705563
+      ],
+      "mask_fill_ratio": 0.289656652360515,
+      "size_bin": "small",
+      "position_bin": "right",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.2687641695153759,
+      "background_intensity_entropy_bits": 7.632646873315711,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "10",
+      "file": "10_airplane_runway.jpg",
+      "segmentation_fraction": 0.06983100043402778,
+      "mask_centroid_normalized": [
+        0.5164621194390823,
+        0.46456076968348153
+      ],
+      "mask_fill_ratio": 0.26815104166666665,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.027041608643982532,
+      "background_intensity_entropy_bits": 6.415391589263638,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "11",
+      "file": "11_bus_road.jpg",
+      "segmentation_fraction": 0.5864189995659722,
+      "mask_centroid_normalized": [
+        0.48531702610087396,
+        0.5656913365331464
+      ],
+      "mask_fill_ratio": 0.8278856464460784,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.09810609166188407,
+      "background_intensity_entropy_bits": 7.277522313740999,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "12",
+      "file": "12_backpack_ground.jpg",
+      "segmentation_fraction": 0.4542711046006944,
+      "mask_centroid_normalized": [
+        0.4933008071835575,
+        0.6797539529425842
+      ],
+      "mask_fill_ratio": 0.8849914123398072,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.01893849958370096,
+      "background_intensity_entropy_bits": 7.0948183956627755,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "13",
+      "file": "13_guitar_wall.jpg",
+      "segmentation_fraction": 0.1597832573784722,
+      "mask_centroid_normalized": [
+        0.5136786761944413,
+        0.7425175891965559
+      ],
+      "mask_fill_ratio": 0.3566174244717564,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.019145243956576134,
+      "background_intensity_entropy_bits": 5.690791128912297,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "14",
+      "file": "14_camera_table.jpg",
+      "segmentation_fraction": 0.11315239800347222,
+      "mask_centroid_normalized": [
+        0.6981327328450454,
+        0.5864550560962576
+      ],
+      "mask_fill_ratio": 0.6888934764657308,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.07077257190049782,
+      "background_intensity_entropy_bits": 7.770630062637722,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "15",
+      "file": "15_basketball_court.jpg",
+      "segmentation_fraction": 0.15003797743055555,
+      "mask_centroid_normalized": [
+        0.5109632486818894,
+        0.5008402675071859
+      ],
+      "mask_fill_ratio": 0.5845487212005919,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.0668703922382153,
+      "background_intensity_entropy_bits": 6.9237556211779046,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "16",
+      "file": "16_legacy_01_woman.jpg",
+      "segmentation_fraction": 0.2167019314236111,
+      "mask_centroid_normalized": [
+        0.5093247620477936,
+        0.6193550748783622
+      ],
+      "mask_fill_ratio": 0.5582849954574044,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.2665494969784073,
+      "background_intensity_entropy_bits": 7.316358146657983,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "17",
+      "file": "17_legacy_02_boat.jpg",
+      "segmentation_fraction": 0.07012939453125,
+      "mask_centroid_normalized": [
+        0.3615656504830199,
+        0.35144269698326236
+      ],
+      "mask_fill_ratio": 0.6403095975232198,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.17838310906902966,
+      "background_intensity_entropy_bits": 6.015842880146,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "18",
+      "file": "18_legacy_03_dog.jpg",
+      "segmentation_fraction": 0.24896240234375,
+      "mask_centroid_normalized": [
+        0.46861069166810154,
+        0.5405016232568933
+      ],
+      "mask_fill_ratio": 0.7694774570835692,
+      "size_bin": "large",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.04072418619350761,
+      "background_intensity_entropy_bits": 6.87356150680489,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "19",
+      "file": "19_coco_dog.png",
+      "segmentation_fraction": 0.03683132595486111,
+      "mask_centroid_normalized": [
+        0.3035455967170383,
+        0.27442354186607876
+      ],
+      "mask_fill_ratio": 0.3265392015392015,
+      "size_bin": "small",
+      "position_bin": "top",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.3195423340961098,
+      "background_intensity_entropy_bits": 7.686660780012558,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "20",
+      "file": "20_legacy_05_polar_bear_cub.jpg",
+      "segmentation_fraction": 0.15250651041666666,
+      "mask_centroid_normalized": [
+        0.500876127262071,
+        0.5314112406222106
+      ],
+      "mask_fill_ratio": 0.45982088087351247,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.06960181806542474,
+      "background_intensity_entropy_bits": 6.224762222064176,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "21",
+      "file": "21_legacy_06_archer.jpg",
+      "segmentation_fraction": 0.09522840711805555,
+      "mask_centroid_normalized": [
+        0.4471737714867334,
+        0.5858840858997049
+      ],
+      "mask_fill_ratio": 0.5701640409290238,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.3138276342812598,
+      "background_intensity_entropy_bits": 7.500664800224818,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "22",
+      "file": "22_legacy_07_bus.jpg",
+      "segmentation_fraction": 0.06146240234375,
+      "mask_centroid_normalized": [
+        0.22959215863196095,
+        0.644327249145739
+      ],
+      "mask_fill_ratio": 0.7992063492063493,
+      "size_bin": "small",
+      "position_bin": "left",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.2087244297038145,
+      "background_intensity_entropy_bits": 7.376639538189988,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "23",
+      "file": "23_legacy_08_vase.jpg",
+      "segmentation_fraction": 0.1268581814236111,
+      "mask_centroid_normalized": [
+        0.5105819079286216,
+        0.45598429902973003
+      ],
+      "mask_fill_ratio": 0.8836923658352229,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.040862135922330095,
+      "background_intensity_entropy_bits": 7.525996934262662,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "24",
+      "file": "24_legacy_09_cactus.jpg",
+      "segmentation_fraction": 0.04389784071180555,
+      "mask_centroid_normalized": [
+        0.25405792851527476,
+        0.5371934595562448
+      ],
+      "mask_fill_ratio": 0.6338621229925577,
+      "size_bin": "small",
+      "position_bin": "left",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.049332188987324714,
+      "background_intensity_entropy_bits": 6.505149063467642,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "25",
+      "file": "25_legacy_10_bear.jpg",
+      "segmentation_fraction": 0.021809895833333332,
+      "mask_centroid_normalized": [
+        0.4592020316173701,
+        0.6537035774131952
+      ],
+      "mask_fill_ratio": 0.379782711384034,
+      "size_bin": "small",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.17483361064891847,
+      "background_intensity_entropy_bits": 7.391972158326459,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "26",
+      "file": "26_skier.png",
+      "segmentation_fraction": 0.1370917426215278,
+      "mask_centroid_normalized": [
+        0.5292638083164726,
+        0.5911162574129672
+      ],
+      "mask_fill_ratio": 0.5898745258243362,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.05695491233171698,
+      "background_intensity_entropy_bits": 6.863637591203088,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "27",
+      "file": "27_bicycle.png",
+      "segmentation_fraction": 0.09380425347222222,
+      "mask_centroid_normalized": [
+        0.6543033371740257,
+        0.5581711987339306
+      ],
+      "mask_fill_ratio": 0.5742516710258646,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.0588068011734419,
+      "background_intensity_entropy_bits": 5.796147357943137,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "28",
+      "file": "28_motorcycle.png",
+      "segmentation_fraction": 0.1416015625,
+      "mask_centroid_normalized": [
+        0.5173479187299301,
+        0.6220309014335305
+      ],
+      "mask_fill_ratio": 0.5664216151696824,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.24396410061939072,
+      "background_intensity_entropy_bits": 7.864034599556366,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "29",
+      "file": "29_train.png",
+      "segmentation_fraction": 0.1472846137152778,
+      "mask_centroid_normalized": [
+        0.4046575412292916,
+        0.5805210967932893
+      ],
+      "mask_fill_ratio": 0.6607642691980041,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.08017464887305349,
+      "background_intensity_entropy_bits": 7.496844095296791,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "30",
+      "file": "30_truck.png",
+      "segmentation_fraction": 0.14301893446180555,
+      "mask_centroid_normalized": [
+        0.5188942498700335,
+        0.41657184081340215
+      ],
+      "mask_fill_ratio": 0.7795150439861018,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.15470811208622504,
+      "background_intensity_entropy_bits": 7.382253533801475,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "31",
+      "file": "31_elephant.png",
+      "segmentation_fraction": 0.12398274739583333,
+      "mask_centroid_normalized": [
+        0.5057183612810386,
+        0.4334777776540037
+      ],
+      "mask_fill_ratio": 0.4614569135241557,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.28772818059361793,
+      "background_intensity_entropy_bits": 7.02057146987239,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "32",
+      "file": "32_giraffe.png",
+      "segmentation_fraction": 0.08045789930555555,
+      "mask_centroid_normalized": [
+        0.5084035518293488,
+        0.5163103950956797
+      ],
+      "mask_fill_ratio": 0.33053798790850586,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "high",
+      "background_edge_density": 0.21444480500324503,
+      "background_intensity_entropy_bits": 7.142730236972479,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "33",
+      "file": "33_zebra.png",
+      "segmentation_fraction": 0.14576551649305555,
+      "mask_centroid_normalized": [
+        0.44916839990077984,
+        0.44467373371061597
+      ],
+      "mask_fill_ratio": 0.5806991948992273,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.36122005049141803,
+      "background_intensity_entropy_bits": 7.239682285273734,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "34",
+      "file": "34_surfboard.png",
+      "segmentation_fraction": 0.09291585286458333,
+      "mask_centroid_normalized": [
+        0.41874647330920367,
+        0.6004587342160042
+      ],
+      "mask_fill_ratio": 0.5094823739402052,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.23598370154386752,
+      "background_intensity_entropy_bits": 7.4804265816178,
+      "visual_background_complexity_bin": "high"
+    },
+    {
+      "id": "35",
+      "file": "35_couch.png",
+      "segmentation_fraction": 0.11594645182291667,
+      "mask_centroid_normalized": [
+        0.7348362919547824,
+        0.6570444084139172
+      ],
+      "mask_fill_ratio": 0.6094318100805589,
+      "size_bin": "medium",
+      "position_bin": "right",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.11105485620478832,
+      "background_intensity_entropy_bits": 7.355393330779398,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "36",
+      "file": "36_potted_plant.png",
+      "segmentation_fraction": 0.1510281032986111,
+      "mask_centroid_normalized": [
+        0.4501106172642656,
+        0.5227392047046631
+      ],
+      "mask_fill_ratio": 0.6094357178041705,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.1507836339526784,
+      "background_intensity_entropy_bits": 7.580534167777692,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "37",
+      "file": "37_laptop.png",
+      "segmentation_fraction": 0.1454196506076389,
+      "mask_centroid_normalized": [
+        0.5081080218866729,
+        0.6767209295784354
+      ],
+      "mask_fill_ratio": 0.7854003369716505,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.06308872894066485,
+      "background_intensity_entropy_bits": 7.20177404345802,
+      "visual_background_complexity_bin": "low"
+    },
+    {
+      "id": "38",
+      "file": "38_pizza.png",
+      "segmentation_fraction": 0.15096028645833334,
+      "mask_centroid_normalized": [
+        0.5066425979229566,
+        0.7284706729630125
+      ],
+      "mask_fill_ratio": 0.8073407805019585,
+      "size_bin": "medium",
+      "position_bin": "bottom",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.15168216236940477,
+      "background_intensity_entropy_bits": 7.471591865927607,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "39",
+      "file": "39_teddy_bear.png",
+      "segmentation_fraction": 0.1574978298611111,
+      "mask_centroid_normalized": [
+        0.43936013343538555,
+        0.5355233714290341
+      ],
+      "mask_fill_ratio": 0.6475213293927397,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "medium",
+      "background_edge_density": 0.1277851117264473,
+      "background_intensity_entropy_bits": 7.149080399928209,
+      "visual_background_complexity_bin": "medium"
+    },
+    {
+      "id": "40",
+      "file": "40_clock.png",
+      "segmentation_fraction": 0.11250813802083333,
+      "mask_centroid_normalized": [
+        0.5120641110990451,
+        0.6167965854418576
+      ],
+      "mask_fill_ratio": 0.7956834532374101,
+      "size_bin": "medium",
+      "position_bin": "center",
+      "occlusion_proxy_bin": "low",
+      "background_edge_density": 0.06550975807314352,
+      "background_intensity_entropy_bits": 7.63110671848754,
+      "visual_background_complexity_bin": "medium"
+    }
+  ]
+}

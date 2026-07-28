@@ -1,0 +1,16 @@
+{
+  "id": "39",
+  "file": "39_teddy_bear.png",
+  "segmentation_fraction": 0.1574978298611111,
+  "mask_centroid_normalized": [
+    0.43936013343538555,
+    0.5355233714290341
+  ],
+  "mask_fill_ratio": 0.6475213293927397,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.1277851117264473,
+  "background_intensity_entropy_bits": 7.149080399928209,
+  "visual_background_complexity_bin": "medium"
+}

@@ -1,0 +1,9 @@
+{
+  "reason": "replaced visible-watermark legacy sample during 100-image audit",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 30494,
+  "coco_annotation_id": 6427,
+  "coco_url": "http://images.cocodataset.org/val2017/000000030494.jpg",
+  "original_image_sha256": "eabc12936cefe60de3cc9cf4bdb49fbb0f9435f188ec54dfb067f597b51c0c3f",
+  "native_image_sha256": "80d3d65fb604b156a20e5b7a68885ea14514d054de24343e6226e3c16cbee801"
+}

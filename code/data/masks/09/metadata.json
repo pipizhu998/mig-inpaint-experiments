@@ -1,0 +1,29 @@
+{
+  "id": "09",
+  "source_group": "selected_from_new20_sam",
+  "subject": "bench",
+  "sam_source_id": "13",
+  "sam_metadata": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/new20_sam_masks_512/13/metadata.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    151,
+    252,
+    384,
+    352
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    127,
+    242,
+    384,
+    362
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    101,
+    230,
+    384,
+    374
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "38",
+  "file": "38_pizza.png",
+  "segmentation_fraction": 0.15096028645833334,
+  "mask_centroid_normalized": [
+    0.5066425979229566,
+    0.7284706729630125
+  ],
+  "mask_fill_ratio": 0.8073407805019585,
+  "size_bin": "medium",
+  "position_bin": "bottom",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.15168216236940477,
+  "background_intensity_entropy_bits": 7.471591865927607,
+  "visual_background_complexity_bin": "medium"
+}

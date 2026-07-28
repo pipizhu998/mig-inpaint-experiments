@@ -1,0 +1,16 @@
+{
+  "id": "04",
+  "file": "04_car_field.jpg",
+  "segmentation_fraction": 0.23209635416666666,
+  "mask_centroid_normalized": [
+    0.6116742621488043,
+    0.5840872360501296
+  ],
+  "mask_fill_ratio": 0.6349536178107607,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.19309912392256606,
+  "background_intensity_entropy_bits": 6.72806885005922,
+  "visual_background_complexity_bin": "high"
+}

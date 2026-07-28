@@ -1,0 +1,52 @@
+{
+  "id": "29",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 232538,
+  "coco_annotation_id": 171151,
+  "coco_category": "train",
+  "coco_url": "http://images.cocodataset.org/val2017/000000232538.jpg",
+  "flickr_url": "http://farm8.staticflickr.com/7449/8715912958_4fb0196877_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by/2.0/",
+    "id": 4,
+    "name": "Attribution License"
+  },
+  "original_size": [
+    640,
+    480
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "13a15467e62e8162eaaa1aa5d44696b1379a5a34d65eaeaa843a1b438e312a09",
+  "native_image_sha256": "027edfc18ad82550a0fb48861c61985168dbb3f1fc42c68b231f44bad042be76",
+  "original_instance_mask_sha256": "e5bcc0aea78894fdd2b9593e499ffd7bda80300ca9b3d22aec4f1d7ea50c9907",
+  "bbox_xyxy_half_open": [
+    51,
+    157,
+    300,
+    289
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    26,
+    143,
+    325,
+    303
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    0,
+    127,
+    355,
+    319
+  ],
+  "segmentation_area_pixels": 21718,
+  "segmentation_area_fraction": 0.1472846137152778,
+  "bbox_area_fraction": 0.222900390625,
+  "enlarged_bbox_area_fraction": 0.3244357638888889,
+  "double_enlarged_bbox_area_fraction": 0.4622395833333333,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

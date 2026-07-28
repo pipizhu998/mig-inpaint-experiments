@@ -1,0 +1,52 @@
+{
+  "id": "37",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 136600,
+  "coco_annotation_id": 1101931,
+  "coco_category": "laptop",
+  "coco_url": "http://images.cocodataset.org/val2017/000000136600.jpg",
+  "flickr_url": "http://farm9.staticflickr.com/8388/8467506866_efa631c5d0_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+    "id": 1,
+    "name": "Attribution-NonCommercial-ShareAlike License"
+  },
+  "original_size": [
+    640,
+    457
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "d60884afbf97caa7f0a3a6ae37eb8b25ae61be3abffc25192622980f177afcc1",
+  "native_image_sha256": "246bab35f74fd5ececfea6cf4ee8f7b50c463a7771ab8fb15446bd4059e3fbff",
+  "original_instance_mask_sha256": "8a8fae2a8496e4a1e4a2603d10e0877c28f293a71e57cae08aa677a13bb8e484",
+  "bbox_xyxy_half_open": [
+    131,
+    166,
+    277,
+    353
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    116,
+    147,
+    292,
+    372
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    98,
+    124,
+    310,
+    384
+  ],
+  "segmentation_area_pixels": 21443,
+  "segmentation_area_fraction": 0.1454196506076389,
+  "bbox_area_fraction": 0.1851535373263889,
+  "enlarged_bbox_area_fraction": 0.2685546875,
+  "double_enlarged_bbox_area_fraction": 0.3738064236111111,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

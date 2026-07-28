@@ -1,0 +1,53 @@
+{
+  "source_family": "coco_val2017_original",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/26_coco_000000173830.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/26_instance.png",
+  "source_image_size": [
+    593,
+    640
+  ],
+  "source_mask_size": [
+    593,
+    640
+  ],
+  "resolution_origin": "resized_from_retained_coco_original",
+  "coco_image_id": 173830,
+  "coco_annotation_id": 521392,
+  "source_image_sha256": "46580410572c0e00f7810b350f1a6c7e75fe70203af2a4deef352b2ab3f441aa",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/26_skier.png",
+  "output_image_sha256": "b8eddb26f9d76b32a5e0fd52e5d3b587fc50c5a4e18743573e9380f90931b524",
+  "sample_id": "26",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    161,
+    149,
+    361,
+    456
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    141,
+    118,
+    381,
+    487
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    117,
+    81,
+    405,
+    512
+  ],
+  "segmentation_fraction": 0.137359619140625,
+  "mask_centroid_normalized": [
+    0.52894377461673,
+    0.5914564104258632
+  ],
+  "mask_fill_ratio": 0.5864495114006515
+}

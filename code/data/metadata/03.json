@@ -1,0 +1,16 @@
+{
+  "id": "03",
+  "file": "03_cat_sofa.jpg",
+  "segmentation_fraction": 0.4157443576388889,
+  "mask_centroid_normalized": [
+    0.698009772979176,
+    0.5829726630524963
+  ],
+  "mask_fill_ratio": 0.6504334171520727,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.025745194539883,
+  "background_intensity_entropy_bits": 7.492483525844998,
+  "visual_background_complexity_bin": "low"
+}

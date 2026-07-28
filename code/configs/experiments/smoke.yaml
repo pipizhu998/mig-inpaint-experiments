@@ -1,0 +1,43 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: smoke
+  output_root: runs
+  resume: true
+
+runtime:
+  python: python3
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: .
+  manifest: config/dataset.json
+  image_dir: data/images
+  mask_dir: data/masks
+  samples: ["01"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+  evaluation_masks: [segmentation]
+
+methods:
+  - name: clean
+    type: identity
+  - name: identity_candidate
+    type: identity
+
+inpainters:
+  - name: passthrough
+    type: identity
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params:
+      baseline_method: clean

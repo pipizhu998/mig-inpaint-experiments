@@ -1,0 +1,161 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_five_way_validation_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_384
+  mask_dir: masks_384
+  # Frozen before observing validation outcomes. ID06 was replaced by ID96
+  # before it produced any artifact because its subject metadata was not the
+  # noun phrase in its attack prompt. None of these images was used by the G8
+  # block/loss development screens or the prior six-image adaptive validation.
+  # The set spans people, animals, vehicles, food, daily objects, object sizes,
+  # and low/medium/high-complexity congruent and incongruent backgrounds.
+  samples:
+    - "03"
+    - "96"
+    - "08"
+    - "16"
+    - "17"
+    - "20"
+    - "22"
+    - "23"
+    - "25"
+    - "34"
+    - "38"
+    - "39"
+    - "41"
+    - "47"
+    - "53"
+    - "64"
+    - "75"
+    - "87"
+    - "95"
+    - "99"
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: g8_fixed_stable_mass025_250
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_l2, five_way_control]
+    params: &g8_stable250
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+      attn_log_interval: 50
+
+  - name: g8_fixed_stable_mass050_250
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_l2, mass050, five_way]
+    params:
+      <<: *g8_stable250
+      spatial_mass_weight: 0.5
+
+  - name: g8_gradient_weight_only_stable_250
+    type: advpaint
+    tags: [g8, safe_inner_coverage, gradient_weight_only, stable_self_l2, five_way]
+    params:
+      <<: *g8_stable250
+      adaptive_block_topk: 3
+      adaptive_required_blocks: down2,mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: gradient_balanced
+      adaptive_block_weight_mode: inverse_gradient
+
+  - name: g8_gradient_add_one_stable_250
+    type: advpaint
+    tags: [g8, safe_inner_coverage, gradient_add_one, stable_self_l2, five_way]
+    params:
+      <<: *g8_stable250
+      layer_match: down_blocks.1,down_blocks.2,mid_block,up_blocks.1,up_blocks.2
+      adaptive_block_topk: 4
+      adaptive_required_blocks: down2,mid,up1
+      adaptive_block_weight_floor: 0.75
+      adaptive_block_score_mode: gradient_balanced
+      adaptive_block_weight_mode: inverse_gradient
+
+  - name: g8_legacy_top3_stable_250
+    type: advpaint
+    tags: [g8, adaptive_blocks, legacy_top3, stable_self_l2, five_way]
+    params:
+      <<: *g8_stable250
+      layer_match: down_blocks,mid_block,up_blocks
+      adaptive_block_topk: 3
+      adaptive_block_weight_floor: 0.25
+      adaptive_block_score_mode: legacy
+
+      # Intentionally no saved-tensor offload/checkpoint flags at 384.
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

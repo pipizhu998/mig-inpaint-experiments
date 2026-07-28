@@ -1,0 +1,16 @@
+{
+  "id": "18",
+  "file": "18_legacy_03_dog.jpg",
+  "segmentation_fraction": 0.24896240234375,
+  "mask_centroid_normalized": [
+    0.46861069166810154,
+    0.5405016232568933
+  ],
+  "mask_fill_ratio": 0.7694774570835692,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.04072418619350761,
+  "background_intensity_entropy_bits": 6.87356150680489,
+  "visual_background_complexity_bin": "low"
+}

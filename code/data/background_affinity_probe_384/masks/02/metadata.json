@@ -1,0 +1,21 @@
+{
+  "id": "02",
+  "file": "02_solid_mean_rgb_basketball.png",
+  "subject": "basketball",
+  "attack_prompt": "a basketball",
+  "inpaint_prompts": [
+    "a soccer ball",
+    "a pumpkin",
+    "a photo"
+  ],
+  "background_variant": "solid_mean_rgb",
+  "background_description": "constant RGB (169, 129, 93)",
+  "solid_background_rgb": [
+    169,
+    129,
+    93
+  ],
+  "shared_foreground_source": "15_basketball_court.jpg",
+  "shared_mask_source": "masks_384/15",
+  "segmentation_fraction": 0.15003797743055555
+}

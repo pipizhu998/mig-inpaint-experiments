@@ -1,0 +1,16 @@
+{
+  "id": "36",
+  "file": "36_potted_plant.png",
+  "segmentation_fraction": 0.1510281032986111,
+  "mask_centroid_normalized": [
+    0.4501106172642656,
+    0.5227392047046631
+  ],
+  "mask_fill_ratio": 0.6094357178041705,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.1507836339526784,
+  "background_intensity_entropy_bits": 7.580534167777692,
+  "visual_background_complexity_bin": "medium"
+}

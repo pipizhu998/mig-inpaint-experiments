@@ -1,0 +1,29 @@
+{
+  "id": "21",
+  "source_group": "legacy_10",
+  "subject": "archer",
+  "legacy_source_id": "06",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/6_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    125,
+    103,
+    219,
+    365
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    115,
+    76,
+    229,
+    384
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    103,
+    45,
+    241,
+    384
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "35",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 344621,
+  "coco_annotation_id": 114670,
+  "coco_category": "couch",
+  "coco_url": "http://images.cocodataset.org/val2017/000000344621.jpg",
+  "flickr_url": "http://farm3.staticflickr.com/2362/3808185084_54d6698314_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "id": 3,
+    "name": "Attribution-NonCommercial-NoDerivs License"
+  },
+  "original_size": [
+    500,
+    333
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "bc6bc6ee78942c31301fa839b1648520fcc59b64f06c7ba46b7dcae6db7d90f6",
+  "native_image_sha256": "0fbea1a714a2d32ea235ac2ca5951109ec93799b33038c8d7be208f757b3cd80",
+  "original_instance_mask_sha256": "53424fb885c502b44f8032a3b631384fb7932c425d68059e71698a1dc3646e5c",
+  "bbox_xyxy_half_open": [
+    190,
+    175,
+    359,
+    341
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    173,
+    158,
+    376,
+    358
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    152,
+    138,
+    384,
+    378
+  ],
+  "segmentation_area_pixels": 17097,
+  "segmentation_area_fraction": 0.11594645182291667,
+  "bbox_area_fraction": 0.1902533637152778,
+  "enlarged_bbox_area_fraction": 0.2753363715277778,
+  "double_enlarged_bbox_area_fraction": 0.3776041666666667,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

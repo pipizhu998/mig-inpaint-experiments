@@ -1,0 +1,130 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_background_affinity_attention_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: data/background_affinity_probe_384
+  manifest: manifest.json
+  image_dir: images
+  mask_dir: masks
+  samples: ["01", "02", "03"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+  evaluation_masks: [segmentation]
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: g8_fixed_all
+    type: advpaint
+    tags: [g8, fixed, all_words]
+    params: &g8
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 150
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      attn_log_interval: 50
+
+  - name: g8_fixed_noun
+    type: advpaint
+    tags: [g8, fixed, core_noun]
+    params:
+      <<: *g8
+      target_word_mode: single
+      target_word_field: subject
+
+  - name: g8_fine_clean_noun
+    type: advpaint
+    tags: [g8, exact_attention, clean_selection, core_noun]
+    params: &fine
+      <<: *g8
+      layer_match: down_blocks,mid_block,up_blocks
+      target_word_mode: single
+      target_word_field: subject
+      adaptive_attention_topk: 6
+      adaptive_attention_weight_floor: 0.25
+      adaptive_attention_source: clean
+
+  - name: g8_fine_context_noun
+    type: advpaint
+    tags: [g8, exact_attention, context_selection, core_noun]
+    params: &fine_context
+      <<: *fine
+      adaptive_attention_source: masked_context
+
+  - name: g8_fine_context_mass
+    type: advpaint
+    tags: [g8, exact_attention, context_selection, mass_suppression]
+    params:
+      <<: *fine_context
+      spatial_mass_weight: 1.0
+
+  - name: g8_fine_context_targeted
+    type: advpaint
+    tags: [g8, exact_attention, context_selection, directional_l2]
+    params:
+      <<: *fine_context
+      self_l2_direction: context_targeted
+      context_target_prompt: ""
+      context_target_weight: 1.0
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: masked_pixel
+    type: masked_pixel
+    params: {baseline_method: clean}
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

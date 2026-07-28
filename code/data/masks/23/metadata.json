@@ -1,0 +1,29 @@
+{
+  "id": "23",
+  "source_group": "legacy_10",
+  "subject": "vase",
+  "legacy_source_id": "08",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/8_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    154,
+    43,
+    238,
+    295
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    145,
+    17,
+    247,
+    321
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    134,
+    0,
+    258,
+    352
+  ]
+}

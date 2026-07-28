@@ -1,0 +1,16 @@
+{
+  "id": "25",
+  "file": "25_legacy_10_bear.jpg",
+  "segmentation_fraction": 0.021809895833333332,
+  "mask_centroid_normalized": [
+    0.4592020316173701,
+    0.6537035774131952
+  ],
+  "mask_fill_ratio": 0.379782711384034,
+  "size_bin": "small",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.17483361064891847,
+  "background_intensity_entropy_bits": 7.391972158326459,
+  "visual_background_complexity_bin": "high"
+}

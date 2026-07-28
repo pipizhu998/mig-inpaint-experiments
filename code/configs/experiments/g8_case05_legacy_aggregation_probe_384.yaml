@@ -1,0 +1,94 @@
+schema_version: 1
+project_root: ../..
+
+# Reuse the completed control artifacts in the main first-10 run. The only new
+# attack changes self_l2_aggregation from block_relative_rms to legacy_sum.
+experiment:
+  name: mig_vs_fixed_mass025_first10_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_384
+  mask_dir: masks_384
+  samples: ["05"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+  evaluation_masks: [segmentation]
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: fixed_stable_mass025
+    type: advpaint
+    tags: [g8, fixed_inner, core_noun, stable_self_l2, current_best]
+    params: &fixed
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+      self_l2_weight: 1.0
+      attn_log_interval: 50
+
+  - name: fixed_paired_legacyagg_mass025
+    type: advpaint
+    tags: [probe, single_factor, legacy_aggregation, paired_noise, mass025]
+    params:
+      <<: *fixed
+      self_l2_aggregation: legacy_sum
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: semantic_protection_case05_legacyagg
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: protected_pixel_case05_legacyagg
+    type: protected_pixel
+    params: {baseline_method: clean}

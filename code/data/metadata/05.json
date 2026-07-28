@@ -1,0 +1,16 @@
+{
+  "id": "05",
+  "file": "05_bird_branch.jpg",
+  "segmentation_fraction": 0.16419813368055555,
+  "mask_centroid_normalized": [
+    0.5893669237660888,
+    0.4790309619251011
+  ],
+  "mask_fill_ratio": 0.343140589569161,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.12950731881470903,
+  "background_intensity_entropy_bits": 7.0278277367055235,
+  "visual_background_complexity_bin": "medium"
+}

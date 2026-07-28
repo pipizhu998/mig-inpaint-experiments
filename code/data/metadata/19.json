@@ -1,0 +1,16 @@
+{
+  "id": "19",
+  "file": "19_coco_dog.png",
+  "segmentation_fraction": 0.03683132595486111,
+  "mask_centroid_normalized": [
+    0.3035455967170383,
+    0.27442354186607876
+  ],
+  "mask_fill_ratio": 0.3265392015392015,
+  "size_bin": "small",
+  "position_bin": "top",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.3195423340961098,
+  "background_intensity_entropy_bits": 7.686660780012558,
+  "visual_background_complexity_bin": "high"
+}

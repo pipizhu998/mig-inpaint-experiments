@@ -1,0 +1,97 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: remote100_four_methods_512_20260723
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 512
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100_512.json
+  image_dir: images_512
+  mask_dir: masks_512
+  id_field: id
+  image_field: file
+  attack_prompt_field: attack_prompt
+  edit_prompts_field: inpaint_prompts
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: two_stage_adaptive_blocks_mig
+    type: advpaint
+    tags: [two_stage, adaptive_blocks, top3, core_noun, mass025, stable_self_l2]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks,mid_block,up_blocks
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: single
+      target_word_field: subject
+      block_weights: down0:1,down1:1,down2:1,mid:1,up1:1,up2:1,up3:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.25
+      self_l2_noise_mode: paired
+      self_l2_aggregation: block_relative_rms
+      self_l2_weight: 1.0
+      adaptive_block_topk: 3
+      adaptive_block_weight_floor: 0.25
+      adaptive_block_score_mode: legacy
+      attn_log_interval: 50
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda

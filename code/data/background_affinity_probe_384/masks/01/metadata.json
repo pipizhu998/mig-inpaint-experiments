@@ -1,0 +1,17 @@
+{
+  "id": "01",
+  "file": "01_congruent_court_basketball.png",
+  "subject": "basketball",
+  "attack_prompt": "a basketball",
+  "inpaint_prompts": [
+    "a soccer ball",
+    "a pumpkin",
+    "a photo"
+  ],
+  "background_variant": "congruent_court",
+  "background_description": "original basketball court",
+  "solid_background_rgb": null,
+  "shared_foreground_source": "15_basketball_court.jpg",
+  "shared_mask_source": "masks_384/15",
+  "segmentation_fraction": 0.15003797743055555
+}

@@ -1,0 +1,16 @@
+{
+  "id": "26",
+  "file": "26_skier.png",
+  "segmentation_fraction": 0.1370917426215278,
+  "mask_centroid_normalized": [
+    0.5292638083164726,
+    0.5911162574129672
+  ],
+  "mask_fill_ratio": 0.5898745258243362,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.05695491233171698,
+  "background_intensity_entropy_bits": 6.863637591203088,
+  "visual_background_complexity_bin": "low"
+}

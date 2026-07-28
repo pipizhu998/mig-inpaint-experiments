@@ -1,0 +1,122 @@
+{
+  "status": "ACTIVE",
+  "paper_status_path": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/results/inpaint_seed_2000/paper_protocol_status.json",
+  "base_images": 25,
+  "extension_images": 15,
+  "merged_images": 40,
+  "extension_ids": [
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "37",
+    "38",
+    "39",
+    "40"
+  ],
+  "copy_images_to": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images",
+  "copy_masks_to": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks",
+  "activated_utc": "2026-07-17T20:33:12.703481+00:00",
+  "backup": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/backups/20260717T203312Z_before_coco15_activation",
+  "paper_config": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/config/dataset_25_paper.json",
+  "merged_config": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/config/dataset_40_coco_extension.json",
+  "copied": [
+    {
+      "id": "26",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/26_skier.png",
+      "image_sha256": "3150d0761725eadfc384e014257653d4a506ee747ee87af0d69c2092ef4e1c4c",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/26"
+    },
+    {
+      "id": "27",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/27_bicycle.png",
+      "image_sha256": "179e8d4a48415f7e2a1f4dfb3ed8322424ac6a5f06cea0fa26762b86fb455887",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/27"
+    },
+    {
+      "id": "28",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/28_motorcycle.png",
+      "image_sha256": "457d1ae489c07914a378c5bbb1285ea8ab8a7034234d84816c7c7b6737699918",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/28"
+    },
+    {
+      "id": "29",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/29_train.png",
+      "image_sha256": "027edfc18ad82550a0fb48861c61985168dbb3f1fc42c68b231f44bad042be76",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/29"
+    },
+    {
+      "id": "30",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/30_truck.png",
+      "image_sha256": "c32b1260f10273e6ee22db2d16db784f2e2a53ab530153ae3e87077828608575",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/30"
+    },
+    {
+      "id": "31",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/31_elephant.png",
+      "image_sha256": "ffc01865976c011a9090a274adb71c66f04bc0f38562b1c9ab6837951f660720",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/31"
+    },
+    {
+      "id": "32",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/32_giraffe.png",
+      "image_sha256": "5d71268a31981b103602e5eec307d41907b11a2b781837e1d8ee0ad7ce99dd3d",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/32"
+    },
+    {
+      "id": "33",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/33_zebra.png",
+      "image_sha256": "8c13e8165f493c431da6b76acf0b15bfdf631236f2b4211caeed7f4a37e04d98",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/33"
+    },
+    {
+      "id": "34",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/34_surfboard.png",
+      "image_sha256": "1e540270b568d441f22afb79158579b35c291e018fe1ceeee383b6d36713d601",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/34"
+    },
+    {
+      "id": "35",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/35_couch.png",
+      "image_sha256": "0fbea1a714a2d32ea235ac2ca5951109ec93799b33038c8d7be208f757b3cd80",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/35"
+    },
+    {
+      "id": "36",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/36_potted_plant.png",
+      "image_sha256": "38ae6a892240eb3fb3141a8c03b229c97f73bc0b45649e84d5dd7dbe0764b91e",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/36"
+    },
+    {
+      "id": "37",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/37_laptop.png",
+      "image_sha256": "246bab35f74fd5ececfea6cf4ee8f7b50c463a7771ab8fb15446bd4059e3fbff",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/37"
+    },
+    {
+      "id": "38",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/38_pizza.png",
+      "image_sha256": "ae09c311dab544be6c2e4bd6001cbd57d84519760c88ea208fa3a4fe74232cbb",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/38"
+    },
+    {
+      "id": "39",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/39_teddy_bear.png",
+      "image_sha256": "57887eac8fe81afa0759371f24c4d269f6f9bb61b2458c5f369fe445a3b2e2eb",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/39"
+    },
+    {
+      "id": "40",
+      "image": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/images/40_clock.png",
+      "image_sha256": "3cf12006811291eff27a7dc0672b3c4877299ce00a78fb29b884e1bea4ce4bc3",
+      "mask_dir": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/masks/40"
+    }
+  ]
+}

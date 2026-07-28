@@ -1,0 +1,235 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: worst_scale_top3_loss_block_ablation_first25_384
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_384
+  mask_dir: masks_384
+  samples:
+    - "01"
+    - "02"
+    - "03"
+    - "04"
+    - "05"
+    - "06"
+    - "07"
+    - "08"
+    - "09"
+    - "10"
+    - "11"
+    - "12"
+    - "13"
+    - "14"
+    - "15"
+    - "16"
+    - "17"
+    - "18"
+    - "19"
+    - "20"
+    - "21"
+    - "22"
+    - "23"
+    - "24"
+    - "25"
+    - "26"
+    - "27"
+    - "28"
+    - "29"
+    - "30"
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  # Loss ablation A: Top-3 mining and the stable three blocks are unchanged;
+  # only the normalized nondirected self-QKV term is removed.
+  - name: ws_top3_cross_only_threeblocks
+    type: advpaint
+    tags: [worst_scale_top3, loss_ablation, cross_only, three_blocks]
+    params: &worst_scale_common
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      worst_scale_mask_name: segmentation.png
+      worst_scale_topk: 3
+      worst_scale_refresh: 5
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_noise_mode: paired
+      self_l2_aggregation: legacy_sum
+      self_l2_weight: 0.0
+      attn_log_interval: 50
+
+  # Loss ablation B: Worst-Scale Top-3 with the complete MIG loss.
+  - name: ws_top3_full_threeblocks
+    type: advpaint
+    tags: [worst_scale_top3, loss_ablation, full_loss, three_blocks]
+    params:
+      <<: *worst_scale_common
+      self_l2_weight: 1.0
+
+  # Block ablations use the released Original MIG-Inpaint protocol: two-stage
+  # complementary masks, fixed mask conditioning, resampled self-L2 noise, and
+  # no Worst-Scale mining. The all-block method defines the shared anchor.
+  - name: mig_original_full_allblocks
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, all_blocks]
+    params: &mig_original_common
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: transformer_blocks
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down0:1,down1:1,down2:1,mid:1,up1:1,up2:1,up3:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_noise_mode: resample
+      self_l2_aggregation: legacy_sum
+      self_l2_weight: 1.0
+      attn_log_interval: 50
+
+  # Block ablation B: one coarse U-Net attention block per method.
+  - name: mig_original_full_down0
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, down0]
+    params:
+      <<: *mig_original_common
+      layer_match: down_blocks.0
+      block_weights: down0:1
+
+  - name: mig_original_full_down1
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, down1]
+    params:
+      <<: *mig_original_common
+      layer_match: down_blocks.1
+      block_weights: down1:1
+
+  - name: mig_original_full_down2
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, down2]
+    params:
+      <<: *mig_original_common
+      layer_match: down_blocks.2
+      block_weights: down2:1
+
+  - name: mig_original_full_mid
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, mid]
+    params:
+      <<: *mig_original_common
+      layer_match: mid_block
+      block_weights: mid:1
+
+  - name: mig_original_full_up1
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, up1]
+    params:
+      <<: *mig_original_common
+      layer_match: up_blocks.1
+      block_weights: up1:1
+
+  - name: mig_original_full_up2
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, up2]
+    params:
+      <<: *mig_original_common
+      layer_match: up_blocks.2
+      block_weights: up2:1
+
+  - name: mig_original_full_up3
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, single_block, up3]
+    params:
+      <<: *mig_original_common
+      layer_match: up_blocks.3
+      block_weights: up3:1
+
+  # Block ablation C: the released MIG-Inpaint stable three-block selection.
+  - name: mig_original_full_threeblocks
+    type: advpaint
+    tags: [original_mig, block_ablation, full_loss, three_blocks]
+    params:
+      <<: *mig_original_common
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      block_weights: down2:1,mid:1,up1:1
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: masked_pixel
+    type: masked_pixel
+    params: {baseline_method: clean}
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

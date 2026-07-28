@@ -1,0 +1,52 @@
+{
+  "source_family": "legacy_non_coco_archive",
+  "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/2.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/2_segmentation.png",
+  "source_image_size": [
+    384,
+    384
+  ],
+  "source_mask_size": [
+    384,
+    384
+  ],
+  "resolution_origin": "resampled_384_to_512",
+  "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+  "source_image_sha256": "dcef7143647468916a8c72e70db045a7dfa55a2ee64be1d8a02f80a95861f90d",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/17_legacy_02_boat.jpg",
+  "output_image_sha256": "347ff50b6002cf7a03f6825c136abf9421705dd2c9c0bf0eb4ce7b42818ed740",
+  "sample_id": "17",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    81,
+    109,
+    308,
+    236
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    58,
+    96,
+    331,
+    249
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    30,
+    80,
+    359,
+    265
+  ],
+  "segmentation_fraction": 0.07014846801757812,
+  "mask_centroid_normalized": [
+    0.3616980882491756,
+    0.35157557712062826
+  ],
+  "mask_fill_ratio": 0.6378646501786396
+}

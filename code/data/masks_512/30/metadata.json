@@ -1,0 +1,53 @@
+{
+  "source_family": "coco_val2017_original",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/30_coco_000000033109.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/30_instance.png",
+  "source_image_size": [
+    640,
+    480
+  ],
+  "source_mask_size": [
+    640,
+    480
+  ],
+  "resolution_origin": "resized_from_retained_coco_original",
+  "coco_image_id": 33109,
+  "coco_annotation_id": 399108,
+  "source_image_sha256": "d4c1905fc9f846478feaf8cd048d39a2d50829d1dae1ef954d9b0e015c081b4d",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/30_truck.png",
+  "output_image_sha256": "ea9d4d7d5b1dd44aaef1c3c7a0ea8d38f3eea1aac6aafbc3e082b76a2f16f641",
+  "sample_id": "30",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    162,
+    101,
+    377,
+    324
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    140,
+    78,
+    399,
+    347
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    114,
+    51,
+    425,
+    374
+  ],
+  "segmentation_fraction": 0.1428985595703125,
+  "mask_centroid_normalized": [
+    0.5186641876579637,
+    0.4167225471030809
+  ],
+  "mask_fill_ratio": 0.7813119199082281
+}

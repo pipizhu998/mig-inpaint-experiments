@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "Congruent basketball-court sample for the G8 background-counterfactual probe.",
+  "items": [
+    {
+      "id": "01",
+      "file": "01_congruent_court_basketball.png",
+      "subject": "basketball",
+      "attack_prompt": "a basketball",
+      "inpaint_prompts": [
+        "",
+        "a basketball"
+      ]
+    }
+  ]
+}

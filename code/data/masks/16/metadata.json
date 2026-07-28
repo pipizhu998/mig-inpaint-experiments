@@ -1,0 +1,29 @@
+{
+  "id": "16",
+  "source_group": "legacy_10",
+  "subject": "woman",
+  "legacy_source_id": "01",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/1_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    119,
+    35,
+    283,
+    384
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    102,
+    0,
+    300,
+    384
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    82,
+    0,
+    320,
+    384
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "36",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 69795,
+  "coco_annotation_id": 20365,
+  "coco_category": "potted plant",
+  "coco_url": "http://images.cocodataset.org/val2017/000000069795.jpg",
+  "flickr_url": "http://farm3.staticflickr.com/2067/2442319829_30988bb57b_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc-sa/2.0/",
+    "id": 1,
+    "name": "Attribution-NonCommercial-ShareAlike License"
+  },
+  "original_size": [
+    640,
+    480
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "f6175e4ec5c2b026093e21268e659291d7869bc7e0a690325747058a4d78d74c",
+  "native_image_sha256": "38ae6a892240eb3fb3141a8c03b229c97f73bc0b45649e84d5dd7dbe0764b91e",
+  "original_instance_mask_sha256": "81990f202e0d0042182f4b8269c5ac1be3944a8ecdde72356cd27ec9b777ad5e",
+  "bbox_xyxy_half_open": [
+    101,
+    82,
+    252,
+    324
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    85,
+    57,
+    268,
+    349
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    66,
+    27,
+    287,
+    379
+  ],
+  "segmentation_area_pixels": 22270,
+  "segmentation_area_fraction": 0.1510281032986111,
+  "bbox_area_fraction": 0.24781629774305555,
+  "enlarged_bbox_area_fraction": 0.3623860677083333,
+  "double_enlarged_bbox_area_fraction": 0.5275607638888888,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

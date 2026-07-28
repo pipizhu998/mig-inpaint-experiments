@@ -1,0 +1,16 @@
+{
+  "id": "10",
+  "file": "10_airplane_runway.jpg",
+  "segmentation_fraction": 0.06983100043402778,
+  "mask_centroid_normalized": [
+    0.5164621194390823,
+    0.46456076968348153
+  ],
+  "mask_fill_ratio": 0.26815104166666665,
+  "size_bin": "small",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "high",
+  "background_edge_density": 0.027041608643982532,
+  "background_intensity_entropy_bits": 6.415391589263638,
+  "visual_background_complexity_bin": "low"
+}

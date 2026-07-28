@@ -1,0 +1,52 @@
+{
+  "id": "28",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 343934,
+  "coco_annotation_id": 150977,
+  "coco_category": "motorcycle",
+  "coco_url": "http://images.cocodataset.org/val2017/000000343934.jpg",
+  "flickr_url": "http://farm6.staticflickr.com/5339/10051858643_11783d3e9f_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by/2.0/",
+    "id": 4,
+    "name": "Attribution License"
+  },
+  "original_size": [
+    640,
+    480
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "98a658b99162f68d6c427253b4564914dc1e62e458ff4dae03cd7d29d1e9d245",
+  "native_image_sha256": "457d1ae489c07914a378c5bbb1285ea8ab8a7034234d84816c7c7b6737699918",
+  "original_instance_mask_sha256": "2cc75dd11032dde8f6d3192aec869a0e1052cbd474c47bdbadc5728e04eba94f",
+  "bbox_xyxy_half_open": [
+    105,
+    141,
+    298,
+    332
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    85,
+    121,
+    318,
+    352
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    61,
+    97,
+    342,
+    376
+  ],
+  "segmentation_area_pixels": 20880,
+  "segmentation_area_fraction": 0.1416015625,
+  "bbox_area_fraction": 0.2499932183159722,
+  "enlarged_bbox_area_fraction": 0.3650105794270833,
+  "double_enlarged_bbox_area_fraction": 0.53167724609375,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

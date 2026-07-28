@@ -1,0 +1,37 @@
+{
+  "id": "01",
+  "file": "solid_teal_bus.png",
+  "subject": "bus",
+  "attack_prompt": "a bus",
+  "inpaint_prompts": [
+    "a red tram",
+    "a fire truck",
+    "a camper van",
+    "a steam locomotive"
+  ],
+  "background_rgb": [
+    111,
+    159,
+    166
+  ],
+  "background_hex": "#6f9fa6",
+  "bbox_xyxy_half_open": [
+    40,
+    150,
+    472,
+    361
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    0,
+    128,
+    512,
+    383
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy_half_open": [
+    0,
+    102,
+    512,
+    409
+  ],
+  "foreground_area_fraction": 0.26615142822265625
+}

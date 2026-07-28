@@ -1,0 +1,82 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: advpaint_2x2x2_ablation
+  output_root: runs
+  resume: true
+
+runtime:
+  python: python3
+
+protocol:
+  resolution: 384
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: .
+  manifest: config/dataset_25_paper.json
+  image_dir: data/images
+  mask_dir: data/masks
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks: [segmentation, bbox, double_enlarged_bbox_rho_1.44]
+
+methods:
+  - name: clean
+    type: identity
+  - name: advpaint_2x2x2
+    type: advpaint
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+    variants:
+      - name: g1_single_all_l2
+        params: {attack_component: all, layer_match: transformer_blocks, timestep_indices: "0"}
+      - name: g2_single_all_ccsl
+        params: &ccsl_all {attack_component: cross_concentration_self_l2, layer_match: transformer_blocks, timestep_indices: "0", target_word_mode: all, block_weights: "down0:1,down1:1,down2:1,mid:1,up1:1,up2:1,up3:1", spatial_entropy_weight: 0.0, spatial_concentration_weight: 1.0}
+      - name: g3_single_selected_l2
+        params: {attack_component: all, layer_match: "down_blocks.2,mid_block,up_blocks.1", timestep_indices: "0"}
+      - name: g4_single_selected_ccsl
+        params: &ccsl_selected {attack_component: cross_concentration_self_l2, layer_match: "down_blocks.2,mid_block,up_blocks.1", timestep_indices: "0", target_word_mode: all, block_weights: "down2:1,mid:1,up1:1", spatial_entropy_weight: 0.0, spatial_concentration_weight: 1.0}
+      - name: g5_multi_all_l2
+        params: {attack_component: all_multistep, layer_match: transformer_blocks, timestep_indices: "0,5,10,15,19"}
+      - name: g6_multi_all_ccsl
+        params: {<<: *ccsl_all, attack_component: cross_concentration_self_l2_multistep, timestep_indices: "0,5,10,15,19"}
+      - name: g7_multi_selected_l2
+        params: {attack_component: all_multistep, layer_match: "down_blocks.2,mid_block,up_blocks.1", timestep_indices: "0,5,10,15,19"}
+      - name: g8_multi_selected_ccsl
+        params: {<<: *ccsl_selected, attack_component: cross_concentration_self_l2_multistep, timestep_indices: "0,5,10,15,19"}
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params: {baseline_method: clean, metric_source: evaluation_metrics.py, device: cuda}

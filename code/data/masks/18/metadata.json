@@ -1,0 +1,29 @@
+{
+  "id": "18",
+  "source_group": "legacy_10",
+  "subject": "dog",
+  "legacy_source_id": "03",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/3_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    94,
+    74,
+    265,
+    353
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    76,
+    46,
+    283,
+    381
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    55,
+    12,
+    304,
+    384
+  ]
+}

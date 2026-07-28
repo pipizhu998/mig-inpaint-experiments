@@ -1,0 +1,16 @@
+{
+  "id": "06",
+  "file": "06_vase_table.jpg",
+  "segmentation_fraction": 0.08075629340277778,
+  "mask_centroid_normalized": [
+    0.45262635821542174,
+    0.7209958682361113
+  ],
+  "mask_fill_ratio": 0.9450793650793651,
+  "size_bin": "medium",
+  "position_bin": "bottom",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.14854516481246496,
+  "background_intensity_entropy_bits": 7.210086393548295,
+  "visual_background_complexity_bin": "medium"
+}

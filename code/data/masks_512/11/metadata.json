@@ -1,0 +1,51 @@
+{
+  "source_family": "retained_new20_native_512",
+  "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/15_bus_road.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/15/segmentation.png",
+  "source_image_size": [
+    512,
+    512
+  ],
+  "source_mask_size": [
+    512,
+    512
+  ],
+  "resolution_origin": "native_512",
+  "source_image_sha256": "c1dd1ad1bc51a1e611859ec8fc4585651183cf38ad679b80d9be02f41ac88cf9",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/11_bus_road.jpg",
+  "output_image_sha256": "c1dd1ad1bc51a1e611859ec8fc4585651183cf38ad679b80d9be02f41ac88cf9",
+  "sample_id": "11",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    0,
+    112,
+    512,
+    475
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    0,
+    75,
+    512,
+    512
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    0,
+    31,
+    512,
+    512
+  ],
+  "segmentation_fraction": 0.5861968994140625,
+  "mask_centroid_normalized": [
+    0.485249288539142,
+    0.5654658348771008
+  ],
+  "mask_fill_ratio": 0.826812155647383
+}

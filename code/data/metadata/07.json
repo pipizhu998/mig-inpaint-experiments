@@ -1,0 +1,16 @@
+{
+  "id": "07",
+  "file": "07_boat_lake.jpg",
+  "segmentation_fraction": 0.08701578776041667,
+  "mask_centroid_normalized": [
+    0.6118449259941399,
+    0.6853090986194702
+  ],
+  "mask_fill_ratio": 0.5455357142857142,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.07870009285051068,
+  "background_intensity_entropy_bits": 6.7927870409657265,
+  "visual_background_complexity_bin": "low"
+}

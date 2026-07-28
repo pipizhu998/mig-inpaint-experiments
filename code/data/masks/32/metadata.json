@@ -1,0 +1,52 @@
+{
+  "id": "32",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 445675,
+  "coco_annotation_id": 598751,
+  "coco_category": "giraffe",
+  "coco_url": "http://images.cocodataset.org/val2017/000000445675.jpg",
+  "flickr_url": "http://farm9.staticflickr.com/8532/8453200511_c07c126d66_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "id": 3,
+    "name": "Attribution-NonCommercial-NoDerivs License"
+  },
+  "original_size": [
+    480,
+    640
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "daea523eb0eec8e335184d878994b2e486220fb2d753075781702be4044227fb",
+  "native_image_sha256": "5d71268a31981b103602e5eec307d41907b11a2b781837e1d8ee0ad7ce99dd3d",
+  "original_instance_mask_sha256": "cae909a89ec799d0945fe62cd360ec53bd1631e1bdf0eee84640677442bad89b",
+  "bbox_xyxy_half_open": [
+    124,
+    64,
+    267,
+    315
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    109,
+    38,
+    282,
+    341
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    91,
+    7,
+    300,
+    372
+  ],
+  "segmentation_area_pixels": 11864,
+  "segmentation_area_fraction": 0.08045789930555555,
+  "bbox_area_fraction": 0.2434149848090278,
+  "enlarged_bbox_area_fraction": 0.3554890950520833,
+  "double_enlarged_bbox_area_fraction": 0.5173407660590278,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

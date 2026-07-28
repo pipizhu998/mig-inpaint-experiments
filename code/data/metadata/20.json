@@ -1,0 +1,16 @@
+{
+  "id": "20",
+  "file": "20_legacy_05_polar_bear_cub.jpg",
+  "segmentation_fraction": 0.15250651041666666,
+  "mask_centroid_normalized": [
+    0.500876127262071,
+    0.5314112406222106
+  ],
+  "mask_fill_ratio": 0.45982088087351247,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.06960181806542474,
+  "background_intensity_entropy_bits": 6.224762222064176,
+  "visual_background_complexity_bin": "low"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "12",
+  "file": "12_backpack_ground.jpg",
+  "segmentation_fraction": 0.4542711046006944,
+  "mask_centroid_normalized": [
+    0.4933008071835575,
+    0.6797539529425842
+  ],
+  "mask_fill_ratio": 0.8849914123398072,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.01893849958370096,
+  "background_intensity_entropy_bits": 7.0948183956627755,
+  "visual_background_complexity_bin": "low"
+}

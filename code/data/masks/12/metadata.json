@@ -1,0 +1,29 @@
+{
+  "id": "12",
+  "source_group": "selected_from_new20_sam",
+  "subject": "backpack",
+  "sam_source_id": "16",
+  "sam_metadata": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/new20_sam_masks_512/16/metadata.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    42,
+    123,
+    332,
+    384
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    13,
+    96,
+    361,
+    384
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    0,
+    67,
+    384,
+    384
+  ]
+}

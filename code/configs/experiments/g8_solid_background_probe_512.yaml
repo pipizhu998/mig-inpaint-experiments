@@ -1,0 +1,99 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: g8_solid_background_probe_512
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 512
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: data/synthetic_g8_solid_bus
+  manifest: manifest.json
+  image_dir: images
+  mask_dir: masks
+  samples: ["01"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  # Standard paper G8: all lexical prompt words, concentration only, no mass.
+  - name: g8_standard
+    type: advpaint
+    tags: [g8, standard, solid_background_probe]
+    params:
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: two_stage
+      two_stage_dir: attack_two_stage
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      attn_log_interval: 25
+
+      # Storage-only fallbacks for the local 15.48 GiB GPU. They preserve the
+      # forward objective, precision, selected layers, and PGD updates.
+      autograd_saved_tensors_cpu_offload: true
+      unet_highres_gradient_checkpointing: true
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: masked_pixel
+    type: masked_pixel
+    params: {baseline_method: clean}
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

@@ -1,0 +1,39 @@
+# Generated experiment artifacts
+/code/runs/
+/code/logs/
+/code/results/
+/exports/
+/transfer/
+
+# Local datasets and downloaded utilities
+/dataset
+/tools/
+/rclone-install.*/
+
+# Python environments and caches
+/.venv/
+/.venv-*/
+**/__pycache__/
+**/.pytest_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Models, checkpoints, and large archives
+**/checkpoints/
+**/*.ckpt
+**/*.pt
+**/*.pth
+**/*.bin
+**/*.safetensors
+*.zip
+*.tar
+*.tar.gz
+*.part-*
+
+# Local runtime files
+*.log
+*.pid
+.DS_Store
+

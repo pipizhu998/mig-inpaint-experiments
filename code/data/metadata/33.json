@@ -1,0 +1,16 @@
+{
+  "id": "33",
+  "file": "33_zebra.png",
+  "segmentation_fraction": 0.14576551649305555,
+  "mask_centroid_normalized": [
+    0.44916839990077984,
+    0.44467373371061597
+  ],
+  "mask_fill_ratio": 0.5806991948992273,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.36122005049141803,
+  "background_intensity_entropy_bits": 7.239682285273734,
+  "visual_background_complexity_bin": "high"
+}

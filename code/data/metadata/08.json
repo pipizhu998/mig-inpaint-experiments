@@ -1,0 +1,16 @@
+{
+  "id": "08",
+  "file": "08_sheep_field.jpg",
+  "segmentation_fraction": 0.08051215277777778,
+  "mask_centroid_normalized": [
+    0.5537154803544158,
+    0.5864761547014984
+  ],
+  "mask_fill_ratio": 0.5155462914712524,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.19899103139013452,
+  "background_intensity_entropy_bits": 7.389260926253268,
+  "visual_background_complexity_bin": "high"
+}

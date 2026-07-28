@@ -1,0 +1,29 @@
+{
+  "id": "20",
+  "source_group": "legacy_10",
+  "subject": "polar bear cub",
+  "legacy_source_id": "05",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/5_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    108,
+    93,
+    306,
+    340
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    88,
+    68,
+    326,
+    365
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    64,
+    38,
+    350,
+    384
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "01",
+  "source_group": "selected_from_new20_sam",
+  "subject": "husky",
+  "sam_source_id": "01",
+  "sam_metadata": "/home/pipizhu/workspace/experiment/7.16_8_ablation_more_data/data/new20_sam_masks_512/01/metadata.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    124,
+    74,
+    384,
+    335
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    98,
+    47,
+    384,
+    362
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    69,
+    15,
+    384,
+    384
+  ]
+}

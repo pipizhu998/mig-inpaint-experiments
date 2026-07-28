@@ -1,0 +1,52 @@
+{
+  "source_family": "legacy_non_coco_archive",
+  "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/1.jpg",
+  "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/1_segmentation.png",
+  "source_image_size": [
+    384,
+    384
+  ],
+  "source_mask_size": [
+    384,
+    384
+  ],
+  "resolution_origin": "resampled_384_to_512",
+  "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+  "source_image_sha256": "5d4d24b87bddad886205221febaef9fd996f76e67f90451470270d9206afc383",
+  "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/data/images_512/16_legacy_01_woman.jpg",
+  "output_image_sha256": "b730d7ac0da2f7f595b198877439a6deaae5da1c113032705c2b6924a7f991dc",
+  "sample_id": "16",
+  "output_size": [
+    512,
+    512
+  ],
+  "interpolation": {
+    "image": "Lanczos",
+    "mask": "nearest-neighbor"
+  },
+  "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+  "bbox_xyxy": [
+    159,
+    47,
+    377,
+    512
+  ],
+  "enlarged_bbox_rho_1.2_xyxy": [
+    137,
+    0,
+    399,
+    512
+  ],
+  "double_enlarged_bbox_rho_1.44_xyxy": [
+    110,
+    0,
+    426,
+    512
+  ],
+  "segmentation_fraction": 0.21693801879882812,
+  "mask_centroid_normalized": [
+    0.5094240861658265,
+    0.6193234845118517
+  ],
+  "mask_fill_ratio": 0.5610042418861596
+}

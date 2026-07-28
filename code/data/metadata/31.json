@@ -1,0 +1,16 @@
+{
+  "id": "31",
+  "file": "31_elephant.png",
+  "segmentation_fraction": 0.12398274739583333,
+  "mask_centroid_normalized": [
+    0.5057183612810386,
+    0.4334777776540037
+  ],
+  "mask_fill_ratio": 0.4614569135241557,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.28772818059361793,
+  "background_intensity_entropy_bits": 7.02057146987239,
+  "visual_background_complexity_bin": "high"
+}

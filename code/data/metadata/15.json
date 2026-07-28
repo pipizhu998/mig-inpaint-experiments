@@ -1,0 +1,16 @@
+{
+  "id": "15",
+  "file": "15_basketball_court.jpg",
+  "segmentation_fraction": 0.15003797743055555,
+  "mask_centroid_normalized": [
+    0.5109632486818894,
+    0.5008402675071859
+  ],
+  "mask_fill_ratio": 0.5845487212005919,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.0668703922382153,
+  "background_intensity_entropy_bits": 6.9237556211779046,
+  "visual_background_complexity_bin": "low"
+}

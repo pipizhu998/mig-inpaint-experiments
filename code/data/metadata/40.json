@@ -1,0 +1,16 @@
+{
+  "id": "40",
+  "file": "40_clock.png",
+  "segmentation_fraction": 0.11250813802083333,
+  "mask_centroid_normalized": [
+    0.5120641110990451,
+    0.6167965854418576
+  ],
+  "mask_fill_ratio": 0.7956834532374101,
+  "size_bin": "medium",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "low",
+  "background_edge_density": 0.06550975807314352,
+  "background_intensity_entropy_bits": 7.63110671848754,
+  "visual_background_complexity_bin": "medium"
+}

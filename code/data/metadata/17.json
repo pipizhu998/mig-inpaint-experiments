@@ -1,0 +1,16 @@
+{
+  "id": "17",
+  "file": "17_legacy_02_boat.jpg",
+  "segmentation_fraction": 0.07012939453125,
+  "mask_centroid_normalized": [
+    0.3615656504830199,
+    0.35144269698326236
+  ],
+  "mask_fill_ratio": 0.6403095975232198,
+  "size_bin": "small",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.17838310906902966,
+  "background_intensity_entropy_bits": 6.015842880146,
+  "visual_background_complexity_bin": "medium"
+}

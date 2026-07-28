@@ -1,0 +1,52 @@
+{
+  "id": "30",
+  "source": "COCO 2017 val instance annotation",
+  "coco_image_id": 33109,
+  "coco_annotation_id": 399108,
+  "coco_category": "truck",
+  "coco_url": "http://images.cocodataset.org/val2017/000000033109.jpg",
+  "flickr_url": "http://farm6.staticflickr.com/5116/7065186875_a68fb077d2_z.jpg",
+  "license": {
+    "url": "http://creativecommons.org/licenses/by-nc/2.0/",
+    "id": 2,
+    "name": "Attribution-NonCommercial License"
+  },
+  "original_size": [
+    640,
+    480
+  ],
+  "native_resolution": [
+    384,
+    384
+  ],
+  "image_resample": "Lanczos before optimization",
+  "mask_resample": "nearest before optimization",
+  "original_image_sha256": "d4c1905fc9f846478feaf8cd048d39a2d50829d1dae1ef954d9b0e015c081b4d",
+  "native_image_sha256": "c32b1260f10273e6ee22db2d16db784f2e2a53ab530153ae3e87077828608575",
+  "original_instance_mask_sha256": "8cdba9989b7de3122b32f44ebf0261a8f4544ef9a76db7de902b9c214aebddde",
+  "bbox_xyxy_half_open": [
+    121,
+    76,
+    283,
+    243
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    104,
+    59,
+    300,
+    260
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    84,
+    38,
+    320,
+    281
+  ],
+  "segmentation_area_pixels": 21089,
+  "segmentation_area_fraction": 0.14301893446180555,
+  "bbox_area_fraction": 0.1834716796875,
+  "enlarged_bbox_area_fraction": 0.2671712239583333,
+  "double_enlarged_bbox_area_fraction": 0.388916015625,
+  "white_mask_semantics": "foreground region to inpaint",
+  "attack_base_mask": "enlarged_bbox_rho_1.2.png"
+}

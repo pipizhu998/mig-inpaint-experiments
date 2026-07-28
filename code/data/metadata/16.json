@@ -1,0 +1,16 @@
+{
+  "id": "16",
+  "file": "16_legacy_01_woman.jpg",
+  "segmentation_fraction": 0.2167019314236111,
+  "mask_centroid_normalized": [
+    0.5093247620477936,
+    0.6193550748783622
+  ],
+  "mask_fill_ratio": 0.5582849954574044,
+  "size_bin": "large",
+  "position_bin": "center",
+  "occlusion_proxy_bin": "medium",
+  "background_edge_density": 0.2665494969784073,
+  "background_intensity_entropy_bits": 7.316358146657983,
+  "visual_background_complexity_bin": "high"
+}

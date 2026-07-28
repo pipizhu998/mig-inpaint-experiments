@@ -1,0 +1,2101 @@
+{
+  "schema_version": 1,
+  "count": 40,
+  "output_resolution": [
+    512,
+    512
+  ],
+  "resolution_origin_counts": {
+    "native_512": 15,
+    "resampled_384_to_512": 9,
+    "resized_from_retained_coco_original": 16
+  },
+  "preserved_384_paths": {
+    "manifest": "/home/pipizhu/workspace/experiment/7.23_new_experiment/code/config/dataset.json",
+    "images": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images",
+    "masks": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/masks"
+  },
+  "items": [
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/01_husky_grass.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/01/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "df432e5d643c4c66572a4151391ed87bf0e935ea8b4d091b04e045d025d4020c",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/01_husky_grass.jpg",
+      "output_image_sha256": "df432e5d643c4c66572a4151391ed87bf0e935ea8b4d091b04e045d025d4020c",
+      "sample_id": "01",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        165,
+        98,
+        512,
+        447
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        130,
+        63,
+        512,
+        482
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        91,
+        21,
+        512,
+        512
+      ],
+      "segmentation_fraction": 0.2388153076171875,
+      "mask_centroid_normalized": [
+        0.6907740900745856,
+        0.48620202831802944
+      ],
+      "mask_fill_ratio": 0.5169483827815992
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/02_horse_field.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/02/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "ff43ef00468b56cbb93754443f86d769e9340d01d431bc2dec4b700a5b48a095",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/02_horse_field.jpg",
+      "output_image_sha256": "ff43ef00468b56cbb93754443f86d769e9340d01d431bc2dec4b700a5b48a095",
+      "sample_id": "02",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        76,
+        248,
+        343,
+        443
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        49,
+        228,
+        370,
+        463
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        16,
+        204,
+        403,
+        487
+      ],
+      "segmentation_fraction": 0.0800933837890625,
+      "mask_centroid_normalized": [
+        0.43378311925223667,
+        0.6108713653033903
+      ],
+      "mask_fill_ratio": 0.4032651493325651
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/03_cat_sofa.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/03/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "f95f90e1a3c4f105ed41992932e5d8611678668d3735fedd28713e546cc64755",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/03_cat_sofa.jpg",
+      "output_image_sha256": "f95f90e1a3c4f105ed41992932e5d8611678668d3735fedd28713e546cc64755",
+      "sample_id": "03",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        156,
+        42,
+        512,
+        512
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        120,
+        0,
+        512,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        80,
+        0,
+        512,
+        512
+      ],
+      "segmentation_fraction": 0.41550445556640625,
+      "mask_centroid_normalized": [
+        0.698113474332752,
+        0.5827987790397487
+      ],
+      "mask_fill_ratio": 0.6509801577814965
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/05_car_field.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/05/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "b1e07d9484ac547e6705e6f22819932168dd49e701ced3c3c551feb03828b37d",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/04_car_field.jpg",
+      "output_image_sha256": "b1e07d9484ac547e6705e6f22819932168dd49e701ced3c3c551feb03828b37d",
+      "sample_id": "04",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        37,
+        204,
+        504,
+        409
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        0,
+        183,
+        512,
+        430
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        158,
+        512,
+        455
+      ],
+      "segmentation_fraction": 0.2315673828125,
+      "mask_centroid_normalized": [
+        0.6112460824950715,
+        0.5839014016363256
+      ],
+      "mask_fill_ratio": 0.6340836684598109
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/07_bird_branch.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/07/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "4d59c8da9a44b4961bc13209cb417df9356281e43a7cb251fc1a24e5b7a3b809",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/05_bird_branch.jpg",
+      "output_image_sha256": "4d59c8da9a44b4961bc13209cb417df9356281e43a7cb251fc1a24e5b7a3b809",
+      "sample_id": "05",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        155,
+        47,
+        435,
+        494
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        127,
+        2,
+        463,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        93,
+        0,
+        497,
+        512
+      ],
+      "segmentation_fraction": 0.1641082763671875,
+      "mask_centroid_normalized": [
+        0.5895467997863825,
+        0.4790114005136645
+      ],
+      "mask_fill_ratio": 0.34372003835091086
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/08_vase_table.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/08/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "2fc19d0be2f3a4eb6c4a9059d54df5b3b9c609f16351308d583ebea7f2b88a7e",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/06_vase_table.jpg",
+      "output_image_sha256": "2fc19d0be2f3a4eb6c4a9059d54df5b3b9c609f16351308d583ebea7f2b88a7e",
+      "sample_id": "06",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        184,
+        254,
+        280,
+        486
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        174,
+        230,
+        290,
+        510
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        162,
+        202,
+        302,
+        512
+      ],
+      "segmentation_fraction": 0.08081436157226562,
+      "mask_centroid_normalized": [
+        0.452934843404968,
+        0.7205540419018551
+      ],
+      "mask_fill_ratio": 0.9511943247126436
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/09_boat_lake.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/09/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "043e62972831edbab68d1fd7e62bc6a422b0746e968dfcee74de94313fd21a8e",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/07_boat_lake.jpg",
+      "output_image_sha256": "043e62972831edbab68d1fd7e62bc6a422b0746e968dfcee74de94313fd21a8e",
+      "sample_id": "07",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        199,
+        253,
+        422,
+        440
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        176,
+        234,
+        445,
+        459
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        149,
+        211,
+        472,
+        482
+      ],
+      "segmentation_fraction": 0.08656692504882812,
+      "mask_centroid_normalized": [
+        0.6117313519354701,
+        0.6850420610405736
+      ],
+      "mask_fill_ratio": 0.544183592719599
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/12_sheep_field.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/12/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "6db0407af5a613c6c9dfe1311ed7471000c614b8a6ed3e4af42dd096c66b099b",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/08_sheep_field.jpg",
+      "output_image_sha256": "6db0407af5a613c6c9dfe1311ed7471000c614b8a6ed3e4af42dd096c66b099b",
+      "sample_id": "08",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        204,
+        180,
+        356,
+        449
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        188,
+        153,
+        372,
+        476
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        169,
+        120,
+        391,
+        509
+      ],
+      "segmentation_fraction": 0.0801544189453125,
+      "mask_centroid_normalized": [
+        0.553717976085234,
+        0.5862328040672313
+      ],
+      "mask_fill_ratio": 0.5138916063392682
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/13_bench_park.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/13/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "e260a3a2358dd6d6b257a08c5ce22fc7ecbe011422f96f79b43141935ecc2ef4",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/09_bench_park.jpg",
+      "output_image_sha256": "e260a3a2358dd6d6b257a08c5ce22fc7ecbe011422f96f79b43141935ecc2ef4",
+      "sample_id": "09",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        202,
+        336,
+        512,
+        469
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        171,
+        322,
+        512,
+        483
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        136,
+        305,
+        512,
+        500
+      ],
+      "segmentation_fraction": 0.045879364013671875,
+      "mask_centroid_normalized": [
+        0.7201100199046601,
+        0.7570793503267356
+      ],
+      "mask_fill_ratio": 0.29170506912442395
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/14_airplane_runway.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/14/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "45a0119ac28fe4abe134502685f7d915e37aff787f9443e3df83084dfcdbaf23",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/10_airplane_runway.jpg",
+      "output_image_sha256": "45a0119ac28fe4abe134502685f7d915e37aff787f9443e3df83084dfcdbaf23",
+      "sample_id": "10",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        0,
+        197,
+        512,
+        330
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        0,
+        183,
+        512,
+        344
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        166,
+        512,
+        361
+      ],
+      "segmentation_fraction": 0.06963729858398438,
+      "mask_centroid_normalized": [
+        0.5149292395563825,
+        0.4648011616258259
+      ],
+      "mask_fill_ratio": 0.26807742011278196
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/15_bus_road.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/15/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "c1dd1ad1bc51a1e611859ec8fc4585651183cf38ad679b80d9be02f41ac88cf9",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/11_bus_road.jpg",
+      "output_image_sha256": "c1dd1ad1bc51a1e611859ec8fc4585651183cf38ad679b80d9be02f41ac88cf9",
+      "sample_id": "11",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        0,
+        112,
+        512,
+        475
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        0,
+        75,
+        512,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        31,
+        512,
+        512
+      ],
+      "segmentation_fraction": 0.5861968994140625,
+      "mask_centroid_normalized": [
+        0.485249288539142,
+        0.5654658348771008
+      ],
+      "mask_fill_ratio": 0.826812155647383
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/16_backpack_ground.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/16/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "7cd91fdc514c1e3a6ecb015a07a2cc9ea7fb6758a755cd5c290acb5c9e20e130",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/12_backpack_ground.jpg",
+      "output_image_sha256": "7cd91fdc514c1e3a6ecb015a07a2cc9ea7fb6758a755cd5c290acb5c9e20e130",
+      "sample_id": "12",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        56,
+        164,
+        443,
+        512
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        17,
+        129,
+        482,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        90,
+        512,
+        512
+      ],
+      "segmentation_fraction": 0.45348358154296875,
+      "mask_centroid_normalized": [
+        0.4932787907443402,
+        0.6798971722855931
+      ],
+      "mask_fill_ratio": 0.8826962487748374
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/17_guitar_wall.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/17/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "1bd4ae72d61622f00dadd26765f09cf2326269f88763ca14d183b977e50a67a9",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/13_guitar_wall.jpg",
+      "output_image_sha256": "1bd4ae72d61622f00dadd26765f09cf2326269f88763ca14d183b977e50a67a9",
+      "sample_id": "13",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        161,
+        69,
+        426,
+        512
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        134,
+        24,
+        453,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        102,
+        0,
+        485,
+        512
+      ],
+      "segmentation_fraction": 0.15910720825195312,
+      "mask_centroid_normalized": [
+        0.5137223946419557,
+        0.7425866826153943
+      ],
+      "mask_fill_ratio": 0.3552877039056178
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/19_camera_table.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/19/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "862cb3c17dd9615870666c507ba221fc0326a33d86efd6bc08b94b0ccc059f6d",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/14_camera_table.jpg",
+      "output_image_sha256": "862cb3c17dd9615870666c507ba221fc0326a33d86efd6bc08b94b0ccc059f6d",
+      "sample_id": "14",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        236,
+        198,
+        466,
+        384
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        213,
+        179,
+        489,
+        403
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        185,
+        156,
+        512,
+        426
+      ],
+      "segmentation_fraction": 0.11258316040039062,
+      "mask_centroid_normalized": [
+        0.6978878192455307,
+        0.5865074019920109
+      ],
+      "mask_fill_ratio": 0.6898784478728378
+    },
+    {
+      "source_family": "retained_new20_native_512",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_sources_512/20_basketball_court.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/new20_sam_masks_512/20/segmentation.png",
+      "source_image_size": [
+        512,
+        512
+      ],
+      "source_mask_size": [
+        512,
+        512
+      ],
+      "resolution_origin": "native_512",
+      "source_image_sha256": "8e102a8a1aee6d340bfc1d7cd9a477b7b94f2cc94a14fa3484e794a80596bf66",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/15_basketball_court.jpg",
+      "output_image_sha256": "8e102a8a1aee6d340bfc1d7cd9a477b7b94f2cc94a14fa3484e794a80596bf66",
+      "sample_id": "15",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        150,
+        143,
+        372,
+        446
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        127,
+        112,
+        395,
+        477
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        100,
+        75,
+        422,
+        512
+      ],
+      "segmentation_fraction": 0.14976882934570312,
+      "mask_centroid_normalized": [
+        0.5108867242062266,
+        0.5007323910020406
+      ],
+      "mask_fill_ratio": 0.5836678262420837
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/1.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/1_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "5d4d24b87bddad886205221febaef9fd996f76e67f90451470270d9206afc383",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/16_legacy_01_woman.jpg",
+      "output_image_sha256": "b730d7ac0da2f7f595b198877439a6deaae5da1c113032705c2b6924a7f991dc",
+      "sample_id": "16",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        159,
+        47,
+        377,
+        512
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        137,
+        0,
+        399,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        110,
+        0,
+        426,
+        512
+      ],
+      "segmentation_fraction": 0.21693801879882812,
+      "mask_centroid_normalized": [
+        0.5094240861658265,
+        0.6193234845118517
+      ],
+      "mask_fill_ratio": 0.5610042418861596
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/2.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/2_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "dcef7143647468916a8c72e70db045a7dfa55a2ee64be1d8a02f80a95861f90d",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/17_legacy_02_boat.jpg",
+      "output_image_sha256": "347ff50b6002cf7a03f6825c136abf9421705dd2c9c0bf0eb4ce7b42818ed740",
+      "sample_id": "17",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        81,
+        109,
+        308,
+        236
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        58,
+        96,
+        331,
+        249
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        30,
+        80,
+        359,
+        265
+      ],
+      "segmentation_fraction": 0.07014846801757812,
+      "mask_centroid_normalized": [
+        0.3616980882491756,
+        0.35157557712062826
+      ],
+      "mask_fill_ratio": 0.6378646501786396
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/3.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/3_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "047c1592fd80b463d0372603246af021d479cfd651216bffec910c1a06bf10b4",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/18_legacy_03_dog.jpg",
+      "output_image_sha256": "b91d0f897ff6a7ff1bd40ff252b2b6ea27dab99f32dc99f43ea101d053f9420c",
+      "sample_id": "18",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        125,
+        99,
+        353,
+        471
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        102,
+        61,
+        376,
+        509
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        74,
+        16,
+        404,
+        512
+      ],
+      "segmentation_fraction": 0.2490081787109375,
+      "mask_centroid_normalized": [
+        0.46867694350731604,
+        0.5403999743854455
+      ],
+      "mask_fill_ratio": 0.7696189398226749
+    },
+    {
+      "source_family": "coco_val2017_audit_replacement",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/dataset_100_repair_archive/pre_repair_sample_19/19_coco_000000030494.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_60_20260721/source/instances_val2017.json",
+      "source_image_size": [
+        640,
+        480
+      ],
+      "source_mask_size": [
+        640,
+        480
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 30494,
+      "coco_annotation_id": 6427,
+      "source_image_sha256": "eabc12936cefe60de3cc9cf4bdb49fbb0f9435f188ec54dfb067f597b51c0c3f",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/19_coco_dog.png",
+      "output_image_sha256": "3a73142c92a0524d3a4e6e95eb1cf323a0ba1536677fd36cf2c98dfaf6f7953c",
+      "sample_id": "19",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        86,
+        31,
+        229,
+        237
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        71,
+        10,
+        244,
+        258
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        53,
+        0,
+        262,
+        283
+      ],
+      "segmentation_fraction": 0.03682708740234375,
+      "mask_centroid_normalized": [
+        0.3035394513169358,
+        0.2748183023007001
+      ],
+      "mask_fill_ratio": 0.32772082286645393
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/5.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/5_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "9c7628a49155d7ac7a7d803e090c10479060c1764fe925fe47ee27bf02e6eed1",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/20_legacy_05_polar_bear_cub.jpg",
+      "output_image_sha256": "d8ec4355378c85189a97e67862befaca248907d9b0a13ba73c46e280c9498572",
+      "sample_id": "20",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        144,
+        124,
+        408,
+        453
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        117,
+        91,
+        435,
+        486
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        85,
+        51,
+        467,
+        512
+      ],
+      "segmentation_fraction": 0.15256881713867188,
+      "mask_centroid_normalized": [
+        0.5009442227245138,
+        0.5313891242276125
+      ],
+      "mask_fill_ratio": 0.4604748088790642
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/6.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/6_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "5f50c8afee712228da8c79eb024778a4609a10b041c227ff81694f8f0c5ec38c",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/21_legacy_06_archer.jpg",
+      "output_image_sha256": "e646616da56b83ed9f8c84f516c664605c97bfb45a2dea483cfc0b6a8bdb03a8",
+      "sample_id": "21",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        167,
+        137,
+        292,
+        487
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        154,
+        102,
+        305,
+        512
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        138,
+        61,
+        321,
+        512
+      ],
+      "segmentation_fraction": 0.09534072875976562,
+      "mask_centroid_normalized": [
+        0.447361817081777,
+        0.5858837343340675
+      ],
+      "mask_fill_ratio": 0.5712685714285715
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/7.png",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/7_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "da72d3ed1d86ec7cb01145b5d1552c73b076808d7c56d7e8315d316f8da5b56b",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/22_legacy_07_bus.jpg",
+      "output_image_sha256": "e511cef2e77bf29c41da6bb979e3cea0c7f6b5bbe1e2fc16c218091d34ffb268",
+      "sample_id": "22",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        31,
+        275,
+        211,
+        387
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        13,
+        263,
+        229,
+        399
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        249,
+        251,
+        413
+      ],
+      "segmentation_fraction": 0.0614166259765625,
+      "mask_centroid_normalized": [
+        0.22982703504272467,
+        0.6443022450195087
+      ],
+      "mask_fill_ratio": 0.7986111111111112
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/8.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/8_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "1851188a3a790d247f9afbdf15e78406a92fe9f19920992f2eeac984ca5f443e",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/23_legacy_08_vase.jpg",
+      "output_image_sha256": "30d98dadbe1729988b78947b0e89365ba4287904b173cee5003682e073b065e8",
+      "sample_id": "23",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        205,
+        57,
+        317,
+        393
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        193,
+        23,
+        329,
+        427
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        179,
+        0,
+        343,
+        468
+      ],
+      "segmentation_fraction": 0.126739501953125,
+      "mask_centroid_normalized": [
+        0.5107356434388552,
+        0.4558366903325491
+      ],
+      "mask_fill_ratio": 0.8828656462585034
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/9.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/9_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "be3b4a4ff689a5711050001c29dd0779c697b3d7600f33b4106127ecf6c35837",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/24_legacy_09_cactus.jpg",
+      "output_image_sha256": "339f9714e69575a9567970d0ffa0a12a041f7f30c769a2ca8f68eed32ff07aa9",
+      "sample_id": "24",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        88,
+        175,
+        180,
+        372
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        78,
+        155,
+        190,
+        392
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        66,
+        131,
+        202,
+        416
+      ],
+      "segmentation_fraction": 0.0438232421875,
+      "mask_centroid_normalized": [
+        0.25420842441223446,
+        0.5374228668458263
+      ],
+      "mask_fill_ratio": 0.6338556610019863
+    },
+    {
+      "source_family": "legacy_non_coco_archive",
+      "source_image": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/clean image/10.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.15_AdvPaint_Mask_Robustness/02_data/mask/segmentation/10_segmentation.png",
+      "source_image_size": [
+        384,
+        384
+      ],
+      "source_mask_size": [
+        384,
+        384
+      ],
+      "resolution_origin": "resampled_384_to_512",
+      "resolution_note": "The workspace contains no higher-resolution source for this legacy sample; the retained 384x384 source remains canonical and this is a compatibility resize.",
+      "source_image_sha256": "83e4e5b775a2cbe413a098242b28b0fbfbea23f2267f9a5751d3af05fbb50795",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/25_legacy_10_bear.jpg",
+      "output_image_sha256": "c2d538fc2e7118ae67619a2e4c6b61051d1b39e14e473e9fc5a319af98c2a126",
+      "sample_id": "25",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        204,
+        237,
+        281,
+        432
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        196,
+        217,
+        289,
+        452
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        186,
+        193,
+        299,
+        476
+      ],
+      "segmentation_fraction": 0.021728515625,
+      "mask_centroid_normalized": [
+        0.4592095390180083,
+        0.653598020514963
+      ],
+      "mask_fill_ratio": 0.37935397935397935
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/26_coco_000000173830.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/26_instance.png",
+      "source_image_size": [
+        593,
+        640
+      ],
+      "source_mask_size": [
+        593,
+        640
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 173830,
+      "coco_annotation_id": 521392,
+      "source_image_sha256": "46580410572c0e00f7810b350f1a6c7e75fe70203af2a4deef352b2ab3f441aa",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/26_skier.png",
+      "output_image_sha256": "b8eddb26f9d76b32a5e0fd52e5d3b587fc50c5a4e18743573e9380f90931b524",
+      "sample_id": "26",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        161,
+        149,
+        361,
+        456
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        141,
+        118,
+        381,
+        487
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        117,
+        81,
+        405,
+        512
+      ],
+      "segmentation_fraction": 0.137359619140625,
+      "mask_centroid_normalized": [
+        0.52894377461673,
+        0.5914564104258632
+      ],
+      "mask_fill_ratio": 0.5864495114006515
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/27_coco_000000224051.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/27_instance.png",
+      "source_image_size": [
+        640,
+        428
+      ],
+      "source_mask_size": [
+        640,
+        428
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 224051,
+      "coco_annotation_id": 344186,
+      "source_image_sha256": "ad01e4704883ecaaa25321efcc24d2ada74a725fe70cc0578890dca7a4745c60",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/27_bicycle.png",
+      "output_image_sha256": "3870d6d06d17695b51566ed0b72434d611d1cc409bdb7aa95fce8acc1de3b4f1",
+      "sample_id": "27",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        279,
+        90,
+        403,
+        434
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        266,
+        55,
+        416,
+        469
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        251,
+        13,
+        431,
+        511
+      ],
+      "segmentation_fraction": 0.09393310546875,
+      "mask_centroid_normalized": [
+        0.6540837602631643,
+        0.5580932131190482
+      ],
+      "mask_fill_ratio": 0.5772693173293323
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/28_coco_000000343934.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/28_instance.png",
+      "source_image_size": [
+        640,
+        480
+      ],
+      "source_mask_size": [
+        640,
+        480
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 343934,
+      "coco_annotation_id": 150977,
+      "source_image_sha256": "98a658b99162f68d6c427253b4564914dc1e62e458ff4dae03cd7d29d1e9d245",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/28_motorcycle.png",
+      "output_image_sha256": "3e95a08e72928fb0f70077fa30e3eec8785f12bc07289126856a872ce7dd1a6e",
+      "sample_id": "28",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        140,
+        188,
+        397,
+        442
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        114,
+        162,
+        423,
+        468
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        83,
+        131,
+        454,
+        499
+      ],
+      "segmentation_fraction": 0.14153289794921875,
+      "mask_centroid_normalized": [
+        0.5171941506573986,
+        0.6218462542727453
+      ],
+      "mask_fill_ratio": 0.5683691289561568
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/29_coco_000000232538.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/29_instance.png",
+      "source_image_size": [
+        640,
+        480
+      ],
+      "source_mask_size": [
+        640,
+        480
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 232538,
+      "coco_annotation_id": 171151,
+      "source_image_sha256": "13a15467e62e8162eaaa1aa5d44696b1379a5a34d65eaeaa843a1b438e312a09",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/29_train.png",
+      "output_image_sha256": "7e2546d6194224399ffb2784acfe4d0a04500f0d6f9c4f8a1c025f11742ad9df",
+      "sample_id": "29",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        68,
+        209,
+        400,
+        385
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        34,
+        191,
+        434,
+        403
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        169,
+        474,
+        425
+      ],
+      "segmentation_fraction": 0.1475830078125,
+      "mask_centroid_normalized": [
+        0.40441389513417797,
+        0.580276665630731
+      ],
+      "mask_fill_ratio": 0.6621029572836802
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/30_coco_000000033109.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/30_instance.png",
+      "source_image_size": [
+        640,
+        480
+      ],
+      "source_mask_size": [
+        640,
+        480
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 33109,
+      "coco_annotation_id": 399108,
+      "source_image_sha256": "d4c1905fc9f846478feaf8cd048d39a2d50829d1dae1ef954d9b0e015c081b4d",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/30_truck.png",
+      "output_image_sha256": "ea9d4d7d5b1dd44aaef1c3c7a0ea8d38f3eea1aac6aafbc3e082b76a2f16f641",
+      "sample_id": "30",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        162,
+        101,
+        377,
+        324
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        140,
+        78,
+        399,
+        347
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        114,
+        51,
+        425,
+        374
+      ],
+      "segmentation_fraction": 0.1428985595703125,
+      "mask_centroid_normalized": [
+        0.5186641876579637,
+        0.4167225471030809
+      ],
+      "mask_fill_ratio": 0.7813119199082281
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/31_coco_000000094852.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/31_instance.png",
+      "source_image_size": [
+        640,
+        512
+      ],
+      "source_mask_size": [
+        640,
+        512
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 94852,
+      "coco_annotation_id": 583886,
+      "source_image_sha256": "f75472ef14356bdc8149b4b36843dd051a09422e4ed9061f00660ac76bdad104",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/31_elephant.png",
+      "output_image_sha256": "b0919b5e752267baff8529e6c3e4d6ebdace767b214799020865ba2d780ad63b",
+      "sample_id": "31",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        106,
+        119,
+        354,
+        402
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        81,
+        90,
+        379,
+        431
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        51,
+        55,
+        409,
+        466
+      ],
+      "segmentation_fraction": 0.12421035766601562,
+      "mask_centroid_normalized": [
+        0.5057339014636446,
+        0.43357411177851884
+      ],
+      "mask_fill_ratio": 0.463937649606748
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/32_coco_000000445675.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/32_instance.png",
+      "source_image_size": [
+        480,
+        640
+      ],
+      "source_mask_size": [
+        480,
+        640
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 445675,
+      "coco_annotation_id": 598751,
+      "source_image_sha256": "daea523eb0eec8e335184d878994b2e486220fb2d753075781702be4044227fb",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/32_giraffe.png",
+      "output_image_sha256": "d2957c0fce0080697a33cd0203d39a5039563b99064ccc7efd771091c07a1807",
+      "sample_id": "32",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        165,
+        86,
+        357,
+        420
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        145,
+        52,
+        377,
+        454
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        121,
+        11,
+        401,
+        495
+      ],
+      "segmentation_fraction": 0.08028411865234375,
+      "mask_centroid_normalized": [
+        0.509025426179501,
+        0.5152983316946403
+      ],
+      "mask_fill_ratio": 0.328187375249501
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/33_coco_000000552902.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/33_instance.png",
+      "source_image_size": [
+        640,
+        427
+      ],
+      "source_mask_size": [
+        640,
+        427
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 552902,
+      "coco_annotation_id": 591952,
+      "source_image_sha256": "ecae0002c2e7c82e63a47c377d92d05a9d340dbe283e2c4a0fdfe21627e77885",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/33_zebra.png",
+      "output_image_sha256": "626fe0ffa0dd9d698aba5ec3cdbdd8cb500b02815c667ab824741a4e9feb5adf",
+      "sample_id": "33",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        104,
+        128,
+        369,
+        377
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        77,
+        103,
+        396,
+        402
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        45,
+        73,
+        428,
+        432
+      ],
+      "segmentation_fraction": 0.14595794677734375,
+      "mask_centroid_normalized": [
+        0.4490637269598906,
+        0.4445375642099313
+      ],
+      "mask_fill_ratio": 0.5798590588770175
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/34_coco_000000164115.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/34_instance.png",
+      "source_image_size": [
+        500,
+        500
+      ],
+      "source_mask_size": [
+        500,
+        500
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 164115,
+      "coco_annotation_id": 653830,
+      "source_image_sha256": "320e938cae3e73a644d301d40748b400a8f72949b01c9e7d16aef9512630bf8d",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/34_surfboard.png",
+      "output_image_sha256": "68ce9d46c6bf13d146ef73fa3c6cb94ddab22535d7942efb7851e2a1bc5a92ad",
+      "sample_id": "34",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        120,
+        207,
+        341,
+        423
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        97,
+        185,
+        364,
+        445
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        70,
+        159,
+        391,
+        471
+      ],
+      "segmentation_fraction": 0.09296417236328125,
+      "mask_centroid_normalized": [
+        0.41882852983240276,
+        0.6004479216771447
+      ],
+      "mask_fill_ratio": 0.5105161722808782
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/35_coco_000000344621.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/35_instance.png",
+      "source_image_size": [
+        500,
+        333
+      ],
+      "source_mask_size": [
+        500,
+        333
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 344621,
+      "coco_annotation_id": 114670,
+      "source_image_sha256": "bc6bc6ee78942c31301fa839b1648520fcc59b64f06c7ba46b7dcae6db7d90f6",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/35_couch.png",
+      "output_image_sha256": "d8f76b8bd21aa3d89573e2f4377783853e9dee50798b12f2187ad47d8f44cf5a",
+      "sample_id": "35",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        253,
+        234,
+        478,
+        455
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        230,
+        211,
+        501,
+        478
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        202,
+        184,
+        512,
+        505
+      ],
+      "segmentation_fraction": 0.1158599853515625,
+      "mask_centroid_normalized": [
+        0.734429022714556,
+        0.6569078971954548
+      ],
+      "mask_fill_ratio": 0.6107993966817497
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/36_coco_000000069795.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/36_instance.png",
+      "source_image_size": [
+        640,
+        480
+      ],
+      "source_mask_size": [
+        640,
+        480
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 69795,
+      "coco_annotation_id": 20365,
+      "source_image_sha256": "f6175e4ec5c2b026093e21268e659291d7869bc7e0a690325747058a4d78d74c",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/36_potted_plant.png",
+      "output_image_sha256": "10e7f4b3748107e99863e2848a876ac14ea93e3ac63d8b860036875b109a0811",
+      "sample_id": "36",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        135,
+        109,
+        336,
+        432
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        114,
+        76,
+        357,
+        465
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        89,
+        37,
+        382,
+        504
+      ],
+      "segmentation_fraction": 0.1510009765625,
+      "mask_centroid_normalized": [
+        0.45011485397250783,
+        0.5229879494294478
+      ],
+      "mask_fill_ratio": 0.6097068835389615
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/37_coco_000000136600.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/37_instance.png",
+      "source_image_size": [
+        640,
+        457
+      ],
+      "source_mask_size": [
+        640,
+        457
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 136600,
+      "coco_annotation_id": 1101931,
+      "source_image_sha256": "d60884afbf97caa7f0a3a6ae37eb8b25ae61be3abffc25192622980f177afcc1",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/37_laptop.png",
+      "output_image_sha256": "c82107ab797f5bbce21b29df638843d5ea4f7c50ea594c214f906302fc55a17c",
+      "sample_id": "37",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        175,
+        221,
+        369,
+        471
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        155,
+        196,
+        389,
+        496
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        131,
+        166,
+        413,
+        512
+      ],
+      "segmentation_fraction": 0.14545440673828125,
+      "mask_centroid_normalized": [
+        0.5082257474301275,
+        0.6767654994269784
+      ],
+      "mask_fill_ratio": 0.7861855670103093
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/38_coco_000000062808.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/38_instance.png",
+      "source_image_size": [
+        640,
+        481
+      ],
+      "source_mask_size": [
+        640,
+        481
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 62808,
+      "coco_annotation_id": 1075290,
+      "source_image_sha256": "547ee9c5c2f5a1b0da558c30f01a92818961999392d205e88422bd4d5bb2e54e",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/38_pizza.png",
+      "output_image_sha256": "01c467fcb2f0dcdcc986e7606cd6f189671219a8f320123a46450da7ca78e86c",
+      "sample_id": "38",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        106,
+        292,
+        408,
+        455
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        75,
+        275,
+        439,
+        472
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        38,
+        255,
+        476,
+        492
+      ],
+      "segmentation_fraction": 0.1510009765625,
+      "mask_centroid_normalized": [
+        0.5066469660199935,
+        0.7282242662239146
+      ],
+      "mask_fill_ratio": 0.8041278998903019
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/39_coco_000000207306.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/39_instance.png",
+      "source_image_size": [
+        375,
+        500
+      ],
+      "source_mask_size": [
+        375,
+        500
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 207306,
+      "coco_annotation_id": 1674889,
+      "source_image_sha256": "cd5164f06687d41ec7990efecd7760bfc26bee633e41ecbb51d5cdf7b9c340ef",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/39_teddy_bear.png",
+      "output_image_sha256": "0ead75c8732b1c3944d348960e1e3f2cee08f64bf261f139cef8fd5f25acce95",
+      "sample_id": "39",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        63,
+        152,
+        366,
+        362
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        32,
+        131,
+        397,
+        383
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        0,
+        105,
+        434,
+        409
+      ],
+      "segmentation_fraction": 0.15710830688476562,
+      "mask_centroid_normalized": [
+        0.4395804620790111,
+        0.5355231881726932
+      ],
+      "mask_fill_ratio": 0.6472575829011472
+    },
+    {
+      "source_family": "coco_val2017_original",
+      "source_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_images/40_coco_000000407825.jpg",
+      "source_mask": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/coco_inpaint_15_20260717/original_masks/40_instance.png",
+      "source_image_size": [
+        499,
+        500
+      ],
+      "source_mask_size": [
+        499,
+        500
+      ],
+      "resolution_origin": "resized_from_retained_coco_original",
+      "coco_image_id": 407825,
+      "coco_annotation_id": 341578,
+      "source_image_sha256": "0871a7c6e308afd0675688a556254bec9652d9ffe5be9f991b4030817e714f50",
+      "output_image": "/home/pipizhu/workspace/experiment/7.23_new_experiment/dataset/mig_inpaint_100_20260721/source_assets/images_512/40_clock.png",
+      "output_image_sha256": "172ad90179c61432b2506605c7fe79a1029f42b22e6dd83783733cefc771f98c",
+      "sample_id": "40",
+      "output_size": [
+        512,
+        512
+      ],
+      "interpolation": {
+        "image": "Lanczos",
+        "mask": "nearest-neighbor"
+      },
+      "bbox_convention": "tight half-open [x0,y0,x1,y1] derived at 512",
+      "bbox_xyxy": [
+        163,
+        223,
+        362,
+        409
+      ],
+      "enlarged_bbox_rho_1.2_xyxy": [
+        143,
+        204,
+        382,
+        428
+      ],
+      "double_enlarged_bbox_rho_1.44_xyxy": [
+        119,
+        181,
+        406,
+        451
+      ],
+      "segmentation_fraction": 0.11248779296875,
+      "mask_centroid_normalized": [
+        0.5118104362728598,
+        0.6168484868434325
+      ],
+      "mask_fill_ratio": 0.796671529691468
+    }
+  ]
+}

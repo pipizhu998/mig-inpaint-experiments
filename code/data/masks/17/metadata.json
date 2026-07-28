@@ -1,0 +1,29 @@
+{
+  "id": "17",
+  "source_group": "legacy_10",
+  "subject": "boat",
+  "legacy_source_id": "02",
+  "legacy_segmentation_metadata": "/home/pipizhu/workspace/experiment/AdvPaint_Mask_Robustness_7.15/02_data/mask/segmentation/2_segmentation.mask.json",
+  "resolution": [
+    384,
+    384
+  ],
+  "bbox_xyxy_half_open": [
+    61,
+    82,
+    231,
+    177
+  ],
+  "enlarged_bbox_rho_1.2_xyxy_half_open": [
+    44,
+    72,
+    248,
+    187
+  ],
+  "double_enlarged_bbox_repeated_rho_1.2_xyxy_half_open": [
+    23,
+    60,
+    269,
+    199
+  ]
+}
