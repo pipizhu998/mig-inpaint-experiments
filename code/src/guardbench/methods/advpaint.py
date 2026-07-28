@@ -550,10 +550,23 @@ class AdvPaintAttack(AttackMethod):
                 raise ValueError(
                     "worst_scale_mask_name requires mask_protocol: single"
                 )
-            if int(self.params.get("worst_scale_topk", 3)) not in range(1, 10):
+            topk = int(self.params.get("worst_scale_topk", 3))
+            if topk not in range(1, 10):
                 raise ValueError("worst_scale_topk must be in [1, 9]")
             if int(self.params.get("worst_scale_refresh", 5)) <= 0:
                 raise ValueError("worst_scale_refresh must be positive")
+            selection_mode = self.params.get(
+                "worst_scale_selection_mode", "top"
+            )
+            if selection_mode not in {"top", "random"}:
+                raise ValueError(
+                    "worst_scale_selection_mode must be top or random"
+                )
+            if selection_mode == "random" and topk != 1:
+                raise ValueError(
+                    "worst_scale_selection_mode random requires "
+                    "worst_scale_topk: 1"
+                )
 
     def fingerprint_payload(self) -> dict[str, Any]:
         payload = dict(source_tree_fingerprint(self.source_root))
@@ -660,6 +673,8 @@ class AdvPaintAttack(AttackMethod):
                     str(int(p.get("worst_scale_topk", 3))),
                     "--worst_scale_refresh",
                     str(int(p.get("worst_scale_refresh", 5))),
+                    "--worst_scale_selection_mode",
+                    str(p.get("worst_scale_selection_mode", "top")),
                 ]
         elif mask_protocol == "two_stage":
             mask_dir = task.attack_mask.parent / str(p.get("two_stage_dir", "attack_two_stage"))

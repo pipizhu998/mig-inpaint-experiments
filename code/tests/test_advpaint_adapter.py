@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -384,7 +385,49 @@ def test_worst_scale_topk_uses_sample_semantic_mask(tmp_path: Path) -> None:
     assert _argument(command, "--worst_scale_mask_base") == str(semantic_mask)
     assert _argument(command, "--worst_scale_topk") == "3"
     assert _argument(command, "--worst_scale_refresh") == "5"
+    assert _argument(command, "--worst_scale_selection_mode") == "top"
     assert "--mask_dir" not in command
+
+
+def test_worst_scale_random_one_is_planned(tmp_path: Path) -> None:
+    semantic_mask = tmp_path / "segmentation.png"
+    semantic_mask.write_bytes(b"mask")
+    method = _method(
+        {
+            "mask_protocol": "single",
+            "worst_scale_mask_name": "segmentation.png",
+            "worst_scale_topk": 1,
+            "worst_scale_refresh": 1,
+            "worst_scale_selection_mode": "random",
+        }
+    )
+    task = _task("a basketball", "basketball")
+    task = replace(
+        task,
+        attack_mask=tmp_path / "enlarged_bbox_rho_1.2.png",
+    )
+    task.attack_mask.write_bytes(b"attack-mask")
+    method.validate()
+
+    command = method.plan(task)["command"]
+
+    assert _argument(command, "--worst_scale_topk") == "1"
+    assert _argument(command, "--worst_scale_refresh") == "1"
+    assert _argument(command, "--worst_scale_selection_mode") == "random"
+
+
+def test_worst_scale_random_requires_top1() -> None:
+    method = _method(
+        {
+            "mask_protocol": "single",
+            "worst_scale_mask_name": "segmentation.png",
+            "worst_scale_topk": 2,
+            "worst_scale_selection_mode": "random",
+        }
+    )
+
+    with pytest.raises(ValueError, match="random requires worst_scale_topk: 1"):
+        method.validate()
 
 
 def test_worst_scale_topk_rejects_two_stage() -> None:

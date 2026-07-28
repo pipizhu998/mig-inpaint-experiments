@@ -1,0 +1,106 @@
+schema_version: 1
+project_root: ../..
+
+experiment:
+  name: mig_scale_selection_random1_vs_top1_first10_512
+  output_root: runs
+  resume: true
+
+runtime:
+  python: $GUARDBENCH_PYTHON
+
+protocol:
+  resolution: 512
+  attack_seed: 9999
+  inpaint_seed: 2000
+
+dataset:
+  root: ../dataset/mig_inpaint_100_20260721
+  manifest: config/dataset_100.json
+  image_dir: images_512
+  mask_dir: masks_512
+  samples:
+    ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+     "11", "15"]
+  attack_mask: enlarged_bbox_rho_1.2
+  masks:
+    segmentation: segmentation.png
+    bbox: bbox.png
+    enlarged_bbox_rho_1.2: enlarged_bbox_rho_1.2.png
+    double_enlarged_bbox_rho_1.44: double_enlarged_bbox_rho_1.44.png
+  evaluation_masks:
+    - segmentation
+    - bbox
+    - enlarged_bbox_rho_1.2
+    - double_enlarged_bbox_rho_1.44
+
+methods:
+  - name: clean
+    type: identity
+
+  - name: mig_single_random_scale1_g8
+    type: advpaint
+    tags: [mig_inpaint, single_stage, random_scale, one_mask]
+    params: &scale_selection_common
+      source_root: AdvPaint-main_revised
+      model_id: runwayml/stable-diffusion-inpainting
+      model_revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      model_variant: fp16
+      iterations: 250
+      linf_pixel: 0.03
+      step_size_model: 0.03
+      attack_scheduler_steps: 20
+      mask_protocol: single
+      worst_scale_mask_name: segmentation.png
+      worst_scale_topk: 1
+      worst_scale_refresh: 1
+      worst_scale_selection_mode: random
+      attack_component: cross_concentration_self_l2_multistep
+      layer_match: down_blocks.2,mid_block,up_blocks.1
+      timestep_indices: 0,5,10,15,19
+      target_word_mode: all
+      block_weights: down2:1,mid:1,up1:1
+      spatial_entropy_weight: 0.0
+      spatial_concentration_weight: 1.0
+      spatial_peak_weight: 0.0
+      spatial_mass_weight: 0.0
+      self_l2_noise_mode: paired
+      self_l2_aggregation: legacy_sum
+      self_l2_weight: 1.0
+      attn_log_interval: 50
+
+  - name: mig_single_worst_scale_top1_g8
+    type: advpaint
+    tags: [mig_inpaint, single_stage, worst_scale, top1]
+    params:
+      <<: *scale_selection_common
+      worst_scale_refresh: 5
+      worst_scale_selection_mode: top
+
+inpainters:
+  - name: sd1_inpainting
+    type: diffusers_inpaint
+    params:
+      model_id: runwayml/stable-diffusion-inpainting
+      revision: 8a4288a76071f7280aedbdb3253bdb9e9d5d84bb
+      variant: fp16
+      dtype: float16
+      device: cuda
+      local_files_only: true
+      steps: 50
+      guidance_scale: 7.5
+      strength: 1.0
+
+evaluators:
+  - name: artifact_manifest
+    type: manifest
+    params: {baseline_method: clean}
+  - name: semantic_protection
+    type: clip_lpips
+    params:
+      baseline_method: clean
+      metric_source: evaluation_metrics.py
+      device: cuda
+  - name: protected_pixel
+    type: protected_pixel
+    params: {baseline_method: clean}

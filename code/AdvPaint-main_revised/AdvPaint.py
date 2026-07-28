@@ -224,6 +224,7 @@ def build_output_filename(args, effective_layer_match, seed):
         ),
         "worst_scale_topk": args.worst_scale_topk,
         "worst_scale_refresh": args.worst_scale_refresh,
+        "worst_scale_selection_mode": args.worst_scale_selection_mode,
         "target_word": args.target_word,
         "target_word_mode": args.target_word_mode,
         "attack_num_inference_steps": args.attack_num_inference_steps,
@@ -989,12 +990,18 @@ def pgd_worst_scale_topk_mig(
     )
     topk = int(args.worst_scale_topk)
     refresh = int(args.worst_scale_refresh)
+    selection_mode = args.worst_scale_selection_mode
     if not 1 <= topk <= len(candidates):
         raise ValueError(
             f"--worst_scale_topk must be in [1,{len(candidates)}]"
         )
     if refresh <= 0:
         raise ValueError("--worst_scale_refresh must be positive")
+    if selection_mode == "random" and topk != 1:
+        raise ValueError(
+            "--worst_scale_selection_mode random requires "
+            "--worst_scale_topk 1"
+        )
 
     model.unet = register_cross_attention_hook(
         model.unet,
@@ -1200,7 +1207,8 @@ def pgd_worst_scale_topk_mig(
     print(
         "[Worst-scale MIG] single stage | no complement | "
         f"scales {[round(value, 6) for value in WORST_SCALE_FACTORS]} | "
-        f"topk {topk} | refresh {refresh} | shared timestep/noise"
+        f"selection {selection_mode} | topk {topk} | refresh {refresh} | "
+        "shared timestep/noise"
         f" | self_l2_weight {args.self_l2_weight}"
     )
     for candidate in candidates:
@@ -1221,6 +1229,7 @@ def pgd_worst_scale_topk_mig(
         - eps
     )
     selected = tuple(range(topk))
+    selection_generator = torch.Generator(device="cpu").manual_seed(args.seed)
     selection_history = []
     pbar = tqdm(range(iters))
     for iteration in pbar:
@@ -1256,39 +1265,59 @@ def pgd_worst_scale_topk_mig(
                 refresh_number % len(timestep_indices)
             ]
             score_timestep = timesteps[score_timestep_index]
-            with torch.no_grad():
-                score_batch = score_timestep.reshape(1).repeat(
-                    current_image_latents.shape[0]
+            score_metrics = None
+            if selection_mode == "random":
+                selected = (
+                    int(
+                        torch.randint(
+                            len(candidates),
+                            (1,),
+                            generator=selection_generator,
+                        ).item()
+                    ),
                 )
-                score_noisy = model.scheduler.add_noise(
-                    current_image_latents, common_noise, score_batch
-                )
-                score_metrics = []
-                for candidate_index in range(len(candidates)):
-                    _, metrics = candidate_loss(
-                        candidate_index,
-                        score_timestep_index,
-                        X_forward,
-                        score_noisy,
+            else:
+                with torch.no_grad():
+                    score_batch = score_timestep.reshape(1).repeat(
+                        current_image_latents.shape[0]
                     )
-                    score_metrics.append(metrics)
-                    clear_attention_state()
-            selected = tuple(
-                sorted(
-                    range(len(candidates)),
-                    key=lambda index: (-score_metrics[index]["loss"], index),
-                )[:topk]
-            )
+                    score_noisy = model.scheduler.add_noise(
+                        current_image_latents, common_noise, score_batch
+                    )
+                    score_metrics = []
+                    for candidate_index in range(len(candidates)):
+                        _, metrics = candidate_loss(
+                            candidate_index,
+                            score_timestep_index,
+                            X_forward,
+                            score_noisy,
+                        )
+                        score_metrics.append(metrics)
+                        clear_attention_state()
+                selected = tuple(
+                    sorted(
+                        range(len(candidates)),
+                        key=lambda index: (
+                            -score_metrics[index]["loss"],
+                            index,
+                        ),
+                    )[:topk]
+                )
             record = {
-                "schema": "advpaint.worst_scale_topk.v1",
+                "schema": "advpaint.scale_selection.v1",
+                "selection_mode": selection_mode,
                 "iteration": iteration + 1,
                 "score_timestep_index": score_timestep_index,
                 "score_timestep": int(score_timestep.item()),
                 "selected": [candidates[index]["name"] for index in selected],
-                "scores": {
-                    candidates[index]["name"]: score_metrics[index]
-                    for index in range(len(candidates))
-                },
+                "scores": (
+                    {
+                        candidates[index]["name"]: score_metrics[index]
+                        for index in range(len(candidates))
+                    }
+                    if score_metrics is not None
+                    else None
+                ),
             }
             selection_history.append(record)
             print(
@@ -4465,6 +4494,15 @@ if __name__ == "__main__":
         default=5,
         type=int,
         help='PGD update interval between full nine-scale loss rankings.',
+    )
+    parser.add_argument(
+        '--worst_scale_selection_mode',
+        choices=('top', 'random'),
+        default='top',
+        help=(
+            'Select highest-loss masks or sample one seeded mask at each '
+            'refresh.'
+        ),
     )
     parser.add_argument('--prompt', required=True,
                         help='prompt')
