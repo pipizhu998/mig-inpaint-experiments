@@ -20,7 +20,7 @@ DATASET_ROOT = ROOT.parent / "dataset" / "mig_inpaint_100_20260721"
 MANIFEST = DATASET_ROOT / "config" / "dataset_100.json"
 RUN = ROOT / "runs" / "mig_scale_selection_random1_vs_top1_first10_512"
 CLEAN_RUN = ROOT / "runs" / "mig_worst_scale_vs_original_100_512"
-OUTPUT = RUN / "analysis" / "scale_selection_metrics_three_methods"
+OUTPUT = RUN / "analysis" / "scale_selection_metrics_four_methods"
 SAMPLES = ("01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "15")
 MASKS = (
     "segmentation",
@@ -38,6 +38,10 @@ METHOD_PATHS = {
     "mig_single_worst_scale_top3_g8": (
         CLEAN_RUN / "inpainting" / "sd1_inpainting"
         / "mig_single_worst_scale_top3_g8"
+    ),
+    "mig_single_worst_scale_top3_random_eraser_eot_g8": (
+        ROOT / "runs" / "mig_worst_scale_top3_random_eraser_eot_first10_512"
+        / "inpainting" / "sd1_inpainting" / "mig_single_worst_scale_top3_g8"
     ),
 }
 METHODS = tuple(METHOD_PATHS)
